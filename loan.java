@@ -1,5 +1,5 @@
 import java.util.*;
-class Loan {
+class Loan{
     int id;
     int account;
     int balance;
@@ -7,7 +7,7 @@ class Loan {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
-        
+
         System.out.println(":: Enter Id :: ");
         var1.id = sc.nextInt();
         System.out.println(":: Enter Account No :: ");
@@ -18,7 +18,6 @@ class Loan {
         var1.name = sc.next();
         System.out.println("\n >> Basic Information Registered <<\n");
         var1.show();
-        var1.start();
         sc.close();
     }
     public void display(){
@@ -30,26 +29,9 @@ class Loan {
         System.out.println("\n Account Holder's Name : "+ name);
         System.out.println("\n================================\n");
     }
-    public void start(){
-        String choice;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("\n\t >> Basic Loan Information Class <<\n ");
-        System.out.println("\t $Program:~ Do you want to Proceed ?\n");
-        System.out.println("Type \"Yes/yes/y\" to Continue | OR \"No/Cancel/n\" To Exit\n");
-        System.out.println("================================\n");
-        System.out.print("\t Choice : ");
-        choice = sc.next();
-        if(choice.equals("Yes") || choice.equals("yes") || choice.equals("y")){
-            System.out.println();
-        }else if(choice.equals("No") || choice.equals("Cancel") || choice.equals("n")){
-            System.out.println("\n\n\n\t\t\t\t Goodbye !");
-            System.exit(0);
-        }else{
-            System.out.println("\n\tSorry, Looks like you've choosen invalid Option ! Please Try Again.\n");
-            start();
-        }
-        sc.close();
-    }
+    
+    
+}
     public void show(){
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
