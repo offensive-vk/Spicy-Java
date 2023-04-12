@@ -29,13 +29,9 @@ class Loan{
         System.out.println("\n Account Holder's Name : "+ name);
         System.out.println("\n================================\n");
     }
-    
-    
-}
     public void show(){
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
-        String show;
         System.out.println("\n Since you've Submitted Your Details for Desired Loan.\n");
         System.out.println("\nDo you want us to display your details?");
         System.out.println("Do you wish to see your loan information?\n");
