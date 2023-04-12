@@ -7,9 +7,7 @@ class Loan {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
-        Loan start = new Loan();
-        //loan show = new loan();
-        start.start();
+
         System.out.println(":: Enter Id :: ");
         var1.id = sc.nextInt();
         System.out.println(":: Enter Account No :: ");
