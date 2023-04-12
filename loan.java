@@ -21,6 +21,7 @@ class Loan{
         sc.close();
     }
     public void display(){
+        System.out.println("\n\n\n\n\nt\t\t\t\t\t\t\t\t");
         System.out.println("================================\n");
         System.out.println("\n :: Basic Details Are As Follows :: \n");
         System.out.println("\n ID "+ id);
