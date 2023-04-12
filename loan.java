@@ -7,7 +7,7 @@ class Loan {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
-
+        
         System.out.println(":: Enter Id :: ");
         var1.id = sc.nextInt();
         System.out.println(":: Enter Account No :: ");
@@ -17,10 +17,12 @@ class Loan {
         System.out.println(":: Enter Your Real Name :: ");
         var1.name = sc.next();
         System.out.println("\n >> Basic Information Registered <<\n");
-        
+        var1.show();
+        var1.start();
         sc.close();
     }
     public void display(){
+        System.out.println("================================\n");
         System.out.println("\n :: Basic Details Are As Follows :: \n");
         System.out.println("\n ID "+ id);
         System.out.println("\n Account Number : "+ account);
@@ -50,19 +52,21 @@ class Loan {
     }
     public void show(){
         Scanner sc = new Scanner(System.in);
+        Loan var1 = new Loan();
         String show;
         System.out.println("\n Since you've Submitted Your Details for Desired Loan.\n");
         System.out.println("\nDo you want us to display your details?");
-        System.out.print("Type \"Y\" to Display OR \"N\" to Cancel \n=> Your Choice : ");
-        show = sc.next();
-        if(show == "Y" || show == "y"){
-            display();
-        }else if(show == "n" || show == "N"){
+        System.out.println("Do you wish to see your loan information?\n");
+        System.out.print("Type \"Y\" to Display OR \"N\" to Exit\n => Choice : ");
+        String choice = sc.next();
+        if(choice.equals("Y") || choice.equals("y")){
+            var1.display();
+        }else if(choice.equals("N") || choice.equals("n")){
             System.exit(0);
         }else{
             System.out.println("\n\tSorry, Looks like you've choosen invalid Option ! Please Try Again.\n");
-            show();
-        }
+            return;
+        };
         sc.close();
     }
 }
@@ -73,9 +77,8 @@ class hloan extends Loan{
     String house; // villa/ flat/ mansion
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        Loan start = new Loan();
         hloan var1 = new hloan();
-        start.start();
+
         System.out.print(":: Enter Loan Amount :: ");
         var1.amount = sc.nextInt();
         System.out.print(":: Enter Interest Rate :: ");
@@ -83,9 +86,20 @@ class hloan extends Loan{
         System.out.print(":: Enter Your House Type :: ");
         var1.house = sc.next();
         System.out.println("\n >> Home Loan Information Registered <<\n");
+        System.out.println("Do you wish to see your loan information?\n");
+        System.out.print("Type \"Y\" to Display OR \"N\" to Exit\n => Choice : ");
+        String choice = sc.next();
+        if(choice.equals("Y") || choice.equals("y")){
+            var1.h_display();
+        }else if(choice.equals("N") || choice.equals("n")){
+            System.exit(0);
+        }else{
+            return;
+        };
         sc.close();
     }
     public void h_display(){
+        System.out.println("================================\n");
         System.out.println("\n :: Home Loan Details Are As Follows :: \n");
         System.out.println("\n Loan Amount : "+ amount);
         System.out.println("\n Interest Rate : "+ interest);
@@ -100,6 +114,7 @@ class vloan extends Loan{
     int rate;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String choice;
         vloan var1 = new vloan();
         System.out.println(":: Enter Your Company Name :: ");
         var1.company = sc.nextLine();
@@ -110,9 +125,20 @@ class vloan extends Loan{
         System.out.println(":: Enter Rate :: ");
         var1.rate = sc.nextInt();
         System.out.println("\n >> Vehicle Loan Information Registered <<\n");
+        System.out.println("Do you wish to see your loan information?\n");
+        System.out.print("Type \"Y\" to Display OR \"N\" to Exit\n => Choice : ");
+        choice = sc.next();
+        if(choice.equals("Y") || choice.equals("y")){
+            var1.v_display();
+        }else if(choice.equals("N") || choice.equals("n")){
+            System.exit(0);
+        }else{
+            return;
+        };
         sc.close();
     }
     public void v_display(){
+        System.out.println("================================\n");
         System.out.println("\n :: Vehicle Loan Details Are As Follows :: \n");
         System.out.println("\n Company Name : "+ company);
         System.out.println("\n Model Number : "+ model);
@@ -129,6 +155,7 @@ class sloan extends Loan{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         sloan var1 = new sloan();
+        String choice;
         System.out.println(":: Enter Your College Name :: ");
         var1.college = sc.nextLine();
         System.out.println(":: Enter SId :: ");
@@ -138,9 +165,21 @@ class sloan extends Loan{
         System.out.println(":: Enter Scholarship Amount :: ");
         var1.scholarship = sc.nextInt();
         System.out.println("\n >> Student Loan Information Registered <<\n");
+        System.out.println("\n================================\n");
+        System.out.println("Do you wish to see your loan information?\n");
+        System.out.print("Type \"Y\" to Display OR \"N\" to Exit\n => Choice : ");
+        choice = sc.next();
+        if(choice.equals("Y") || choice.equals("y")){
+            var1.s_display();
+        }else if(choice.equals("N") || choice.equals("n")){
+            System.exit(0);
+        }else{
+            return;
+        };
         sc.close();
     }
     public void s_display(){
+        System.out.println("================================\n");
         System.out.println("\n :: Student Loan Details Are As Follows :: \n");
         System.out.println("\n College Name : "+ college);
         System.out.println("\n Student Id Number : "+ sid);
