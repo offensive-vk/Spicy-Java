@@ -7,7 +7,7 @@ class Loan{
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         Loan var1 = new Loan();
-
+        var1.welcome();
         System.out.println(":: Enter Id :: ");
         var1.id = sc.nextInt();
         System.out.println(":: Enter Account No :: ");
@@ -46,6 +46,14 @@ class Loan{
             return;
         };
         sc.close();
+    }
+    private void welcome(){
+        System.out.println("=============== >> Created By Vedansh << =================");
+        System.out.println("\n====================================================");
+        System.out.println("\n:: Welcome To Chintu Loan Services :: \n");
+        System.out.println("In This Section You'll Have to Enter Your Basic Details as per your legal documents.\n");
+        System.out.println("\t\t\t Please Proceed : ");
+        System.out.println("\n-------------------------\n");
     }
 }
 
