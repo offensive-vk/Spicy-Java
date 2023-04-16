@@ -21,7 +21,7 @@ class Loan{
         sc.close();
     }
     public void display(){
-        System.out.println("\n\n\n\n\nt\t\t\t\t\t\t\t\t");
+        
         System.out.println("================================\n");
         System.out.println("\n :: Basic Details Are As Follows :: \n");
         System.out.println("\n ID "+ id);
@@ -49,6 +49,7 @@ class Loan{
         sc.close();
     }
     private void welcome(){
+        System.out.println("\n\n\n\n\n\t\t\t\t\t\t\t\t\t");
         System.out.println("=============== >> Created By Vedansh << =================");
         System.out.println("\n====================================================");
         System.out.println("\n:: Welcome To Chintu Loan Services :: \n");
