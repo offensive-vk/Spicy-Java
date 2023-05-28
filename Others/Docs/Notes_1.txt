@@ -1,0 +1,488 @@
+Java Basics:
+------------
+Keyword:
+--------
+-It is a predefined/reserved word whose meaning is known to the compiler directly
+-Java has 50 keywords
+-All keywords are lower case letters
+
+e.g.:
+-----
+	public,static,void,int,float,char,boolean,if,else,
+	switch,while,do,for,break,continue....
+
+variable:
+---------
+-A variable is an identifier which allocated some memory space
+
+Rules for Identifiers(variable/method/class name)
+---------------------
+-can contain A-Z,a-z,0-9,_,$
+-cannot start with a digit(0-9)
+-cannot be a keyword
+
+Valid Identifiers:
+------------------
+empNum
+rollNo123
+customer_name
+$empSalary
+
+Invalid Identifiers:
+--------------------
+emp Num(space is not allowed)
+123empNo(should not start with a number)
+custNo#(# is not allowed)
+while(cannot be a keyword)
+
+Data Type:
+----------
+Type of data the variable holds is called as data type
+
+
+Types:
+------
+-Primitive data types
+-Reference data types
+
+Primitive Data Types:
+---------------------
+
+byte--->1 byte--->0
+
+short--->2 bytes--->0
+
+char--->2 bytes--->''
+
+int--->4 bytes--->0
+
+long--->8 bytes--->0
+
+float--->4 bytes--->0.0
+
+double--->8 bytes--->0.0
+
+boolean--->1 bit--->false
+
+Declaration of variable:
+------------------------
+In order to allocate memory space for variable we need to declare the variable
+
+syntax:
+-------
+datatype var1,var2,...varn;
+
+e.g.,
+
+int a,b;//e.g., 32,65,-89,0,245
+char c;//e.g., 'c','p','j','9','*'
+float f;//e.g., 3.14,76.98,0.45,-98.56
+
+boolean b1=true;//1
+boolean b2=false;//0
+
+Reference Data Types:
+---------------------
+
+e.g.,  Arrays,Strings,Classes
+
+Points on Data Types:
+---------------------
+-Default values are applicable only to the data members(declared within the class) of the class not for local variables(declared within a method)
+
+e.g.,
+
+class Sample
+{
+	int m;//data member
+	void xxx()
+	{
+		int n;//local variable
+		SOP(n);//error-local variable n should be initialized
+	}
+	psv main()
+	{
+		Sample s=new Sample();
+		SOP(s.m);//0
+		s.xxx();
+	}
+}
+
+-Local variables need to be initialized
+
+-Memory allocation for reference data type is done during runtime using new operator
+
+-Default value for reference data type is null
+
+e.g.,
+
+String s;//data member
+SOP(s);//null
+
+Type Casting:
+-------------
+Converting from one primitive type into another primitive type or one reference type into another reference type is called as type casting
+
+Types of Casting:
+-----------------
+-Implicit Casting
+-Explicit Casting
+
+Implicit Casting:
+-----------------
+-Converting lower data type to higher data type
+-It happens automatically
+
+	int n=1000;
+	long x=n;  //valid
+	System.out.println(x);
+
+	short s=45;
+	double d=s;  //valid
+	System.out.println(d);
+
+	char c= 'A';
+	int a = c; //valid
+	System.out.println(d);
+Note:
+-----
+-C/C++ supports ASCII Codes(255 synbols)
+-Java/.NET/PHP/Python supports UNICODEs(65536 symbols)
+-ASCII codes are subset of UNICODEs
+
+Explicit Casting:
+-----------------
+-Converting higher type to lower type
+-Programmer has to cast to the required type explicitly
+
+	long x = 1000;
+	int n=(int)x;
+	System.out.println(n);
+
+	double d=15.5;
+	byte b=(byte)d;
+	System.out.println(n);
+
+	int a = 65;
+	char c = (char)a;
+	System.out.println(c);
+
+float f=3.14;//error- In Java, a value with decimal point is double type
+
+
+Operators:
+----------
+-Arithmetic Operators(+,-,*,/,%(modulus-remainder))
+
+	+=>addition
+	-=>subtraction
+	*=>multiplication
+	/=>division
+	%=>modulus(remainder)
+
+
+
+-Relational Operators(>,<,>=,<=,==,!=(not equal))
+	-used for comparision
+
+
+
+-Logical Operators(&&(AND),||(OR),!(NOT))
+	-used to join the conditions
+
+e.g.,
+
+if((m1>=40)&&(m2>=40)&&(m3>=40))
+	result="Pass";
+
+e.g.,
+
+if((m1<40)||(m2<40)||(m3<40))
+	result="fail";
+
+-In case of && all conditions should be true
+-In case of || any one condition can be true
+
+-Assignment Operators(=,+=,-=,*=,/=,%=)
+	-shortcut/shorthand operators
+
+
+
+
+-Conditional Operator(?:)-Ternary Operator
+
+	syntax
+	------
+	(condition)?expression1:expression2
+
+-It is used to check a condition and if the condition is true it will
+ execute expression1 else if the condition is false it will execute expression2
+
+
+-Increment and Decrement Operators(++,--)
+	
+	Increment=> ++ =>value of variable is incremented by 1
+	Decrement=> -- =>value of variable is decremented by 1
+
+Types:
+------
+-pre
+-post
+
+Scanner class:
+--------------
+-Scanner class is a predefined class and added in Java 5 version
+-Scanner class is used to read the values into the variables from the keyboard during program execution(runtime)
+-Scanner class is present in java.util package
+
+import java.util.Scanner;
+
+-Creating Scanner class object
+
+		Scanner s=new Scanner(System.in);//System.in represents keyboard 
+
+Methods of Scanner class:
+-------------------------
+-nextInt() => to read an int value
+-nextLong() => to read long value
+-nextFloat() => to read float value
+-nextDouble() => to read double value
+-next() => to read string value without spaces
+-nextLine() => to read string value with spaces
+
+Write a Program(WAP) to find area of a rectangle
+
+
+//to find area of rectangle
+package mypackage;
+import java.util.Scanner;
+public class Rectangle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter length value:");
+		int length=sc.nextInt();
+		System.out.println("Enter breadth value:");
+		int breadth=sc.nextInt();
+		int area=length*breadth;
+		System.out.println("Area of Rectangle:"+area);
+	}
+
+}
+
+Assignment-1:
+-------------
+
+1)WAP to find sum of two numbers
+
+2)WAP to find area of a circle
+		double PI=3.14;
+		area=PI*radius*radius;
+
+WAP to accept rollnumber, name and marks in three subjects.
+Find total and average. Display roll number, name, total and average
+
+package mypackage;
+import java.util.Scanner;
+public class Student {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Roll Number:");
+		int rollNo=sc.nextInt();
+		System.out.println("Enter Name:");
+		String name=sc.next();
+		System.out.println("Enter marks of three subjects:");
+		double m1=sc.nextDouble();
+		double m2=sc.nextDouble();
+		double m3=sc.nextDouble();
+		double total=m1+m2+m3;
+		double avg=total/3;
+		System.out.println("Roll No:"+rollNo);
+		System.out.println("Name:"+name);
+		System.out.println("Total Marks:"+total);
+		System.out.println("Average:"+avg);
+	}
+
+}
+
+
+Explanation of First Java Program
+---------------------------------
+Line 1://to display Welcome message onto the screen
+Line 2:class Welcome
+Line 3:{
+Line 4:	public static void main(String args[])
+Line 5:	{
+Line 6:	System.out.println("Welcome");
+Line 7:	}
+Line 8:} 
+
+Line 1:
+-------
+It is a comment line and used to document a program and ignored by the compiler
+
+	Types of comments
+	-----------------
+	// => single line comment
+	/*....*/ => multiline comment
+
+Line 2:
+-------
+It is a class. A Java program is a collection of classes
+
+Line 3 & 8:
+-----------
+Open and close { } of a class
+
+Line 4:
+-------
+public static void main(String[] args)
+
+JVM:
+----
+-JVM stands for Java Virtual Machine
+-JVM acts as an interface between Java Byte Code and Operating System
+-When a Java program is executed, JVM looks for main() in the class
+-main() is the entry point to run Java program
+
+public:
+-------
+-public is a keyword
+-public is an access modifier
+-public members are accessible outside the class/folder
+-Since JVM is outside the class/folder, to access main() by JVM, main() should be public
+
+static:
+-------
+-static is a keyword
+-static members are accessible directly with the classname without creating objects
+
+e.g.,
+
+class Employee
+{
+	static String deptName;
+}
+/*Employee emp=new Employee();
+emp.deptName="sales";*/
+Employee.deptName="sales";
+
+void
+----
+-void is a keyword
+-void means no return type
+-main() does not return any value back to JVM
+
+Return type:
+------------
+Method/function
+-------------
+A method is a set of statements used to do a specific task
+
+e.g.,
+
+//Defining method
+int areaRect(int length,int breadth)//length and breadth are arguments/parameters
+{
+	int area;
+	area=length*breadth;
+	return area;
+}
+
+int result=areaRect(10,5);//calling method
+SOP(result);//50
+
+
+
+e.g.,
+
+void areaRect(int length,int breadth)//length and breadth are arguments/parameters
+{
+	int area;
+	area=length*breadth;
+	SOP(area);
+}
+
+areaRect(10,5);//calling method
+
+String[] args:
+---------------
+-String is a predefined class
+-String[] args is used to store command line arguments
+
+	e.g.,
+			>java Welcome x y z
+	
+			x,y and z are command line arguments
+
+			args[0]=>x,args[1]=>y,args[2]=>z
+
+Line 5&7: Open and Close {  }  of main()
+
+Line 6: System.out.println()
+----------------------------
+It is used to display messages or the value of variables or both onto the screen
+
+System:It is a predefined class
+
+out: out is a data member of System class and it is an object of PrintStream class and it is static
+
+println():It is a method of PrintStream
+
+class System
+{
+	static PrintStream out;
+}
+
+
+Assignment:
+-----------
+WAP to find sum of 5 numbers given as command line arguments
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

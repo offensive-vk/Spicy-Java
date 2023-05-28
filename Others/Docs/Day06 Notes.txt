@@ -1,0 +1,687 @@
+Packages:
+---------
+A package is a collection of related classes and interfaces(.class files)
+
+package keyword is used to create a package
+
+e.g., package mypackage;
+
+package statement should be the first statement in source code file
+
+e.g.,
+
+In a source code file we have only one package statement
+
+The classes under the packafe are stored in a folder whose name is same as the package name
+
+Only public classes are accessible outside the package
+
+To use the classes of one package into another we need to import the package
+
+e.g.,
+
+	import mypackage.A;
+	import mypackage.B;
+		or
+	import mypackage.*;//indicates all classes under the package
+
+Access Modifiers:
+-----------------
+There are 4 access modifiers
+1.private
+2.default
+3.protected
+4.public
+
+1.private:
+----------
+A class cannot be private
+	e.g.,
+			private class MyClass{}//error
+
+private keyword can be used for data members, methods and inner classes
+private members are accessible only within the class
+
+e.g.,
+
+	class A
+	{
+		private int n;
+	}
+	class B
+	{
+		void xxx()
+		{
+			A a=new A();
+			a.n=10//error-n is private(not visisble)
+		{
+	}
+
+2.default(no need to specify)
+-----------------------------
+-A class can be default
+-Accessible only within the package
+
+3.protected:
+------------
+A class cannot be protected
+	e.g., 
+		protected class MyClass{}//error
+
+protected keyword can be used for data members, methods and inner classes
+protected members are accessible within the package and subclass of another package
+
+4.public:
+---------
+-A class can be public
+-accessible everywhere
+-If the class is public then the name of the source code file should be same as the class name.
+
+Example:
+--------
+package mypackage;
+
+class defAccessSpecifier
+{
+	void display()
+	{
+		System.out.println("You are using default access specifier");
+	}
+}
+public class AccessSpecifier1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Default Access Specifier");
+		defAccessSpecifier obj=new defAccessSpecifier();
+		obj.display();
+	}
+
+}
+
+
+-------------------------------------------------------------------------------
+
+package mypackage;
+
+class PriSpecifier
+{
+	private void display()
+	{
+		System.out.println("You are using private access specifer");
+	}
+}
+public class AccessSpecifier2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//private
+		System.out.println("Private Access Specifier");
+		PriSpecifier obj=new PriSpecifier();
+		//trying to access private method of another class
+		//obj.display();
+	}
+
+}
+
+-----------------------------------------------------------------------------
+
+package mypackage2;
+
+
+public class AccessSpecifier3 {
+
+	protected void display()
+	{
+		System.out.println("This is protected access specifier");
+	}
+
+}
+
+
+package mypackage3;
+
+import mypackage2.*;
+public class ProAccessSpecifier extends AccessSpecifier3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProAccessSpecifier obj=new ProAccessSpecifier();
+		obj.display();
+		
+	}
+
+}
+
+
+--------------------------------------------------------------------------------
+
+package mypackage;
+
+public class PubAccessSpecifier {
+	public void display()
+	{
+		System.out.println("This is Public Access Specifier");
+	}
+}
+
+package mypackage2;
+
+import mypackage.*;
+public class AccessSpecifer4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PubAccessSpecifier obj=new PubAccessSpecifier();
+		obj.display();
+	}
+
+}
+
+Summary:
+---------
+private==>accessible only within the class
+default==>accessible only within the package
+protected==>accessible within package+subclass of another package
+public==>accessible everywhere
+
+Non-Access Modifiers:
+---------------------
+static
+final
+abstract
+synchronized
+tansient
+
+Note: we can use final modifier for local variables(declared within a method)
+
+Encapsulation:
+--------------
+The wrapping(binding) up of data and methods together into a container called class and providing security to data is called encapsulation
+
+
+Example:
+---------
+package mypackage;
+
+class Employee
+{
+	private int age;
+	void setAge(int a)
+	{
+		if(a>=18&&a<=60)
+		{
+			age=a;
+			System.out.println(age);
+		}
+		else
+			System.out.println("Invalid age");
+	}
+}
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e=new Employee();
+		//e.age=20;//error
+		e.setAge(30);
+	}
+
+}
+
+Example:2
+---------
+
+package mypackage;
+
+class Student
+{
+	private int rollNo;
+	private String name;
+	private String course;
+	public int getRollNo() {
+		return rollNo;
+	}
+	public void setRollNo(int rollNo) {
+		this.rollNo = rollNo;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	
+}
+public class StudentTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student s=new Student();
+		s.setRollNo(555);
+		s.setName("Mendu");
+		s.setCourse("JAVA FSD");
+		System.out.println("Roll Number:"+s.getRollNo());
+		System.out.println("Name:"+s.getName());
+		System.out.println("Course:"+s.getCourse());
+	}
+
+}
+
+
+Java Coding Standards:
+----------------------
+-classname
+	-first letter of every word is capital
+
+	e.g.,
+			System,RuntimeException,ArrayIndexOutOfBoundsException
+			EmployeeTest
+
+-variable
+	-first letter of first word is small and remaining words first letter is capital
+
+	e.g.,
+			out,studentMarks,empSalary,empNetSalary,empAge
+
+-method
+	-first letter of first word is small and the remaining words first letter is capital
+
+	e.g., println(),nextInt(),printStackTrace(),calculateTotal()
+
+-final variable
+	-all capitals
+	
+	e.g., MAX,MIN_VALUE,MAX_VALUE,PI
+
+-keywords
+	-all small
+	
+	e.g.,   int,class,public,static
+
+-packages
+	-all small
+	
+	e.g.,
+			mypack1,com.jdbc.mysql,com.myprograms
+
+java.lang package:
+-------------------
+java.lang package is imported to all java programs implicitly
+
+classes under java.lang package:
+----------------------------------
+-Object
+-String
+-StringBuffer
+-StringBuilder
+-System
+-Math
+
+Wrapper classes:
+----------------
+-Byte
+-Short
+-Character
+-Integer
+-Long
+-Float
+-Double
+-Boolean
+
+Object class:
+-------------
+Object class is the top most class in java hierarchy
+Any class in Java is a subclass of Object class
+
+e.g.,
+		class A (extends Object)
+		{}
+		class B extends A
+		{}
+
+String class
+------------
+A string is a collection of characters
+In java, String is immutable(like a constant)
+
+String s="Hello";
+s="Hi";
+
+The objects which are no longer referenced are ready for garbage collection and these objects wll be destroyed during garbage collection process by the garbage collector
+
+Java provides automatic garbage collection
+
+Methods of String class:
+------------------------
+charAt()
+--------
+used to return the char at the given index
+
+e.g.,
+		String s="Hello";
+		SOP(charAt(1));//e
+
+contains()
+----------
+used to check whether a String is present in the given string
+
+e.g.,
+		String s="Welcome";
+		SOP(s.contains("come"));//true
+
+compareTo()
+-----------
+used to compare one string with another string
+
+e.g.,
+
+		String s1="abc";
+		String s2="xyz";
+		if(s1.compareTo(s2)<0)
+			SOP(s1+"is less than "+s2);
+		else if(s1.compareTo(s2)>0)
+			SOP(s1+"is greater than "+s2);
+		else
+			SOP(s1+"is equal to "+s2);
+
+output:
+-------
+abc is less than xyz
+
+equals() and equalsIgnoreCase()
+------------------------------
+used to check for the equality of two string
+
+equals()=>case sensitive
+equalsIgnoreCase()=>not case sensitive
+
+e.g.,
+		String s1="HELLO";
+		String s2="hello";
+		SOP(s1.equals(s2));//false
+		SOP(s1.equalsIgnoreCase(s2));//true
+
+concat()
+--------
+used to join one string with another string
+
+e.g.,
+		String s1="Hello";
+		String s2="Folks";
+		SOP(s1.concat(s2));//HelloFolks
+
+length()
+--------
+used to return the number of characters
+
+e.g.,
+		String s="Welcome";
+		SOP(s.length());//7
+
+endsWith() and startsWith()
+---------------------------
+e.g.,
+		String s="Welcome";
+		SOP(endsWith("come"));//true
+		SOP(startsWith("Wel"));//true
+
+indexOf()
+---------
+used to return the index of the given substring
+
+e.g.,
+
+		String s="Welcome";
+		SOP(s.indexOf("come"));//3
+		SOP(s.indexOf("xyz"));//-1
+
+toUpperCase() and toLowerCase()
+-------------------------------
+e.g.,
+
+	String s="HeLLo";
+	SOP(s.toUpperCase());//HELLO
+	SOP(s.toLoweCase());//hello
+
+trim()
+------
+used to remove the white spaces before and end of the string
+
+e.g.,
+		String s=" Hello Folks     ";
+		SOP(s.trim());//Hello Folks
+
+valueOf()
+---------
+used to convert number type to String
+
+e.g.,
+		int n=245;
+		String s=String.valueOf(n);
+		SOP(s)//"245"
+
+toCharArray()
+-------------
+used to convert the given string into char array
+
+e.g.,
+		String s="hello";
+		char[] charArray=s.toCharArray();
+
+		charArray[]=>{'h','e','l','l','o'}
+
+split()
+-------
+used to divide the string into substrings based on the given delimiter(space,comma,etc)
+
+e.g,
+
+		String str="Java is OO Programming Language";
+		String[] strArray=str.split(" ");
+		for(String s:strArray)
+			System.out.println(s);
+
+WAP to count the number of vowels, consonants and words in the given line of text
+
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class CountString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a line of text:");
+		String str=sc.nextLine();
+		int vowels=0,consonants=0,words=1;
+		for(int i=0;i<str.length();i++)
+		{
+			switch(str.charAt(i))
+			{
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u': vowels++;break;
+				case ' ':words++;break;
+				default:consonants++;
+			}
+		}
+		System.out.println("Number of Vowels:"+vowels);
+		System.out.println("Number of Consonants:"+consonants);
+		System.out.println("Number of words:"+words);
+	}
+
+}
+
+StringBuffer class:
+-------------------
+-StringBuffer is mutable
+-The methods in StringBuffer class is synchronized
+
+StringBuilder class:
+--------------------
+-StringBuilder is mutable
+-The methods in StringBuilder class are not synchronized
+
+Generating Random numbers:
+--------------------------
+Random numbers are used to generate OTPs(One Time Password)
+
+Math.random() is used to generate random numbers
+
+0.0>Math.random()<1.0
+
+Wrapper classes:
+----------------
+-For every primitive type there is a corresponding reference type called as Wrapper class
+-Wrapper classes are final(cannot be subclassed) and immutable
+-Wrapper classes are used to convert reference type into primitive type called as parsing
+
+Example:
+--------
+		String s1="245";
+		int n=Integer.parseInt(s1);
+		System.out.println(n);
+		
+		String s2="35.6";
+		double d=Double.parseDouble(s2);
+		System.out.println(d);
+				
+		String s3="true";
+		boolean b=Boolean.parseBoolean(s3);
+		System.out.println(b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

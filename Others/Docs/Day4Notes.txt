@@ -1,0 +1,595 @@
+Arrays:
+-------
+An array is a collection of elements of similar type and stored in 
+continuous memory locations
+
+int n1,n2,...n10;
+
+
+Types of Arrays:
+----------------
+-One Dimensional Array
+-MultiDimensional Array
+
+One Dimensional Array:
+----------------------
+Declaration syntax:
+-------------------
+datatype[] arrayname;
+		or
+datatype arrayname[];
+		or
+datatype []arrayname;
+
+e.g.,
+-----
+int[] n;
+String names[];
+double []salaries;
+
+int n[5];//error- since in Java, arrays are reference type
+
+Note:
+-----
+In Java memory allocation for reference type is done during runtime using new operator
+
+Memory Allocation:
+------------------
+int[] n=new int[5];
+
+
+Assignment:-
+-----------
+WAP to find sum of the elements present in the array.
+
+
+WAP to create an int array of given size and display the elements of the array.
+
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class ArrayCreate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Array Size:");
+		int size=sc.nextInt();
+		int[] n=new int[size];
+		System.out.println("Enter "+size+" elements:");
+		for(int i=0;i<n.length;i++)
+		{
+			n[i]=sc.nextInt();
+		}
+		System.out.println("Given Array Elements:");
+		for(int i=0;i<n.length;i++)
+		{
+			System.out.println(n[i]);
+		}
+		sc.close();
+		//Enchanced for loop(foreach)
+		System.out.println("Given Array Elements-foreach");
+		for(int x:n)
+			System.out.println(x);
+	}
+
+}
+
+
+WAP to find sum of given array elements
+
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class ArraySum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int[] n=new int[5];
+		int sum=0;
+		System.out.println("Enter 5 value:");
+		for(int i=0;i<n.length;i++)
+		{
+			n[i]=sc.nextInt();
+			sum=sum+n[i];
+		}
+		System.out.println("Sum:"+sum);
+	}
+
+}
+
+
+Note:
+-----
+In Java if we try to access an array element which is out of index then it will throw an exception(runtime error)
+
+WAP to search an element in the given array
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class ArraySearch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int[] n=new int[5];
+		System.out.println("Enter 5 values:");
+		for(int i=0;i<n.length;i++)
+			n[i]=sc.nextInt();
+		System.out.println("Enter value to search:");
+		int key=sc.nextInt();
+		if(search(n,key))
+			System.out.println("Found");
+		else
+			System.out.println("Not Found");
+	}
+	static boolean search(int[] n,int key)
+	{
+		for(int i=0;i<n.length;i++)
+		{
+			if(key==n[i])
+				return true;
+		}
+		return false;
+	}
+
+}
+
+
+Assignment-Arrays:
+------------------
+1.WAP to find biggest,smallest,second biggest and second smallest in 
+the given array
+
+e.g.,    int[] n={5,8,6,4,7}
+			
+			output:
+			-------
+			Big=8
+			Second Big=7
+			Small=4
+			Second Small=5
+
+
+2.WAP to find sum of even elements of the given array
+
+e.g.,
+
+			int[] n={5,8,6,4,7};
+
+			output:
+			-------
+			Sum of Even Elements:18(6+4+8)
+
+
+Multi-Dimensional Array:
+-------------------------
+-It is used to collect the data in the form of rows and columns
+-In Java, multidimensional arrays are aslo known as array of arrays
+
+Declaration:
+------------
+datatype[][] arrayname;
+		or
+datatype arrayname[][];
+		or
+datatype[] arrayname[];
+
+e.g.,:
+-------
+int[][] n;
+String names[][];
+double[] salaries[];
+
+Memory Allocation:
+------------------
+int[][] n=new int[3][3];
+
+WAP to create 3x3 matrix and display the elements in matrix form
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class MultiArraysDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int[][] n=new int[3][4];
+		System.out.println("Enter 9 values:");
+		for(int i=0;i<n.length;i++)
+		{
+			for(int j=0;j<n[i].length;j++)
+			{
+				n[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("Given 3x3 matrix:");
+		for(int i=0;i<n.length;i++)
+		{
+			for(int j=0;j<n[i].length;j++)
+			{
+				System.out.print(n[i][j]+"  ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+Assignment:
+-----------
+WAP to find sum of principal diagonal elements of a given 3x3 matrix.
+
+Introduction to OOP:
+--------------------
+OOP stands for Object Oriented Programming.
+
+Class:
+------
+A class is a collection of data members and methods.
+
+e.g.,
+
+class Employee
+{
+//Data members
+int empNum;
+String empName;
+double empSalary;
+//methods
+void setEmpDetails()
+{
+...
+}
+void dispEmpDetails()
+{
+....
+}
+}
+
+
+Object:
+-------
+An instance of a class is called object.
+
+
+Creating objects:
+-----------------
+Syntax:
+-------
+ClassName objName=new ClassName();
+
+e.g.,
+
+Employee e=new Employee();//e is an object of class Employee
+
+The members(data members/methods) of the class are accessed using objects with dot(.) operator
+
+e.g.,
+-----
+			e.empNum=111;
+			e.empName="Jay";
+			e.setEmpDetails();
+
+When a new object is created for a class then it allocates new memory for all data members of the class and the values in data members are default values.
+
+this reference:
+---------------
+this refers to the current object
+this reference is generally used differentiate data members of a class
+and arguments of a method when the names are same.
+
+package mypackage;
+
+class Employee
+{
+	int empNum;
+	String empName;
+	double empSalary;
+	void setEmpDetails(int empNum,String empName,double empSalary)
+	{
+		this.empNum=empNum;
+		this.empName=empName;
+		this.empSalary=empSalary;
+	}
+	void dispEmpDetails()
+	{
+		System.out.println("EMP Num:"+empNum);
+		System.out.println("EMP Name:"+empName);
+		System.out.println("EMP Salary:"+empSalary);
+	}
+}
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee e=new Employee();
+		e.setEmpDetails(555, "Jay", 25000.00);
+		e.dispEmpDetails();
+		Employee e1=new Employee();
+		e1.setEmpDetails(666, "Mendu", 12500.50);
+		e1.dispEmpDetails();
+		e1.setEmpDetails(777, "Raj", 45000.00);
+		e1.dispEmpDetails();
+	}
+
+}
+
+Constructors:
+-------------
+
+A constructor is a special method whose name is same as the class name an sused to initialize the object and does not return anything not even void.
+
+In Java objects are created using constructors
+
+Note: If we have more than one constructor in a class then it is a constructor overloading.
+
+package mypackage;
+
+import java.util.Scanner;
+
+class Sample
+{
+	int i,j;
+	Sample(int i,int j)//parameterized constructor
+	{
+		this.i=i;
+		this.j=j;
+	}
+	Sample()//default constructor
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first value:");
+		i=sc.nextInt();
+		System.out.println("Enter Second Value:");
+		j=sc.nextInt();
+		sc.close();
+	}
+	void display()
+	{
+		System.out.println("i:"+i+" j:"+j);
+	}
+}
+public class SampleTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Sample s=new Sample(10,20);
+		s.display();
+		Sample s1=new Sample();
+		s1.display();
+	}
+}
+
+
+Points on Constructor:
+----------------------
+If a class does not contain a constructor, Java creates a default constructor(no argument) in the class.
+
+e.g.,
+-----
+			class Sample
+			{
+				Sample(){}//default constructor, added implicitly
+			}
+
+If a class contains a parameterized constructor then it is the responsibility of the program to add default constructor in the class
+
+Constructors are used for intialization of variables
+
+static keyword:
+---------------
+static keyword can be used for data members, methods and inner clases(a class within a class)
+
+static keyword cannot be used for top level class(outer class)
+
+static keyword cannot be used for local variables(declared within a method)
+
+e.g.,
+-----
+			void xxx()
+			{
+				static int n;//error-local variables cannot be static
+			}
+
+static members are accessible directly with the class name without creating objects
+
+Objects can also access static members
+
+A static method can access only other static members directly
+
+A static variable acts as a global variable within class means all objects of the class can access static variable memory
+
+package mypackage;
+
+class MyClass
+{
+	int m;//instance or non-static variable
+	static int n;//class or static variable
+	void m1()//instance method or non-static method
+	{
+		m=10;
+		n=20;
+	}
+	static void m2()
+	{
+		//m=30;//error-non-static m cannot be accessed from static context
+		n=40;
+	}
+	void display()
+	{
+		System.out.println("m:"+m+" n:"+n);
+	}
+}
+public class StaticDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyClass my1=new MyClass();
+		my1.m1();
+		my1.display();//m=10 n=20
+		MyClass my2=new MyClass();
+		MyClass.m2();
+		my2.display();//m=0 n=40
+		MyClass.n=100;
+		my1.display();
+		my2.display();	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

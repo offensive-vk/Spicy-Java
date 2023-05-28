@@ -1,0 +1,762 @@
+Assignment:
+-----------
+WAP to accept item number, item name, rate and quantity. Find price(rate*qty).
+Display item number, item name and price.
+
+Control Statements:
+-------------------
+These statements are used to control the flow of execution of a program.
+
+Types:
+------
+if statement/if...else statement
+switch statement
+while loop
+do...while loop
+for loop
+break and continue
+
+if statement/if...else statement:
+---------------------------------
+It is used to execute the set of statements when the condition is true. If the condition is false it will execute the set of statements present in else part.
+
+syntax:
+-------
+if(condition)
+{
+statement-1;
+statement-2;
+..
+..
+statement-n;
+}
+else
+{
+statement-1;
+statement-2;
+..
+..
+statement-n;
+}
+
+Points on if statement:
+-----------------------
+-For if, else is optional
+-For else, if is mandatory
+-if {} are not used then it considers only one statement means for one statement using {} is options
+
+WAP to find biggest of two numbers
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class IfDemo01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number:");
+		int n1=sc.nextInt();
+		System.out.println("Enter second number:");
+		int n2=sc.nextInt();
+		if(n1>n2)
+			System.out.println("Big:"+n1);
+		else
+			System.out.println("Big:"+n2);
+		sc.close();
+	}
+
+}
+
+
+WAP to check whether the given number is Even or Odd
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class EvenOdd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int n=sc.nextInt();
+		if(n%2==0)
+			System.out.println("Even");
+		else
+			System.out.println("Odd");
+		sc.close();
+	}
+
+}
+
+
+nested if:
+----------
+if within if called as nested if
+
+if(condition1)
+{
+statements;
+}
+else if(condition2)
+{
+statements;
+}
+else if(condition3)
+{
+statements;
+}
+
+WAP to check the given number is Positive, Negative or Zero.
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class CheckNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		int n=sc.nextInt();
+		if(n>0)
+			System.out.println("Positive");
+		else if(n<0)
+			System.out.println("Negative");
+		else 
+			System.out.println("Zero");
+	}
+
+}
+
+
+WAP to find biggest of 3 numbers
+
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class BigThree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter three numbers:");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		int n3=sc.nextInt();
+		if(n1>n2&&n1>n3)
+			System.out.println("Big:"+n1);
+		else if(n2>n3)
+			System.out.println("Big:"+n2);
+		else
+			System.out.println("Big:"+n3);
+		sc.close();
+	}
+
+}
+
+switch statement:
+-----------------
+-It is used to choose an option among the given set of options
+-It is mainly used for menu driven applications
+
+syntax:
+-------
+switch(expression)
+{
+case opt1:statements;break;
+case opt2:statements;break;
+case opt3:statements;break;
+case opt4:statements;break;
+...
+...
+case optn:statements;break;
+default:statements;
+}
+
+points on switch statement:
+---------------------------
+-If expression is not matching with any one of the options then it will execute the statements present in default
+
+-default is optional
+
+-default can be anywhere in between the options
+
+-break is used to come out of switch
+
+-If break is not used then it will execute the statements of other options until break
+
+-expression should be of type int(byte/short/char)
+-From Java 7 version, expression can be of type string
+
+WAP to accept two numbers and display the following options/menu
+
+1.Add
+2.Subtract
+3.Multiply
+4.Divide
+
+Display the result based on the user choice
+
+n1=10,n=5,ch=1=>Result=15
+n1=10,n2=5,ch=3=>Result=50
+n1=10,n2=4,ch=8==>Invalid choice
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int res=0;
+		System.out.println("Enter two numbers:");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		System.out.println("1.Add");
+		System.out.println("2.Subtract");
+		System.out.println("3.Multiply");
+		System.out.println("4.Divide");
+		System.out.println("Enter your choice:");
+		int ch=sc.nextInt();
+		switch(ch)
+		{
+		case 1: res=n1+n2;break;
+		case 2: res=n1-n2;break;
+		case 3: res=n1*n2;break;
+		case 4: res=n1/n2;break;
+		default:System.out.println("Invalid Choice");System.exit(1);//comes out of program
+		
+		}
+		System.out.println("Result:"+res);
+	}
+
+}
+
+
+Assigment 3:
+------------
+1.WAP to check whether the given age is major(>=18) or minor
+	Note: If the given age is <0 then display "Invalid Age"
+
+2.WAP to check whether the given year is leap year or not
+
+3.WAP to find biggest of given three numbers using conditional operator(?)
+
+4.WAP to check whether the given char is vowel or consonant(switch)
+
+Loops:
+------
+
+Loops are used to execute the set of statements repeatedly when the condition is true
+
+Types:
+------
+while loop
+do.. while loop
+for loop
+
+while loop:
+-----------
+syntax:
+-------
+while(condition)
+{
+st-1;
+st-2;
+...
+st-n;
+}
+
+Note:if no {} then it considers only one statement
+
+WAP to find even numbers from 1 to 100
+
+package mypackage;
+
+public class Even {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=1;
+		while(i<=100)
+		{
+			if(i%2==0)
+				System.out.print(i+" ");
+			i++;
+		}
+	}
+
+}
+
+WAP to find sum of given 10 numbers
+
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class SumTen {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n,i=1,sum=0;
+		while(i<=10)
+		{
+			System.out.println("Enter a Number:");
+			n=sc.nextInt();
+			sum=sum+n;
+			i++;
+		}
+		System.out.println("Sum:"+sum);
+	}
+
+}
+
+WAP to find biggest of given 10 nums
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class BigTen {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n,i=1,big=0;
+		while(i<=10)
+		{
+			System.out.println("Enter a number:");
+			n=sc.nextInt();
+			if(n>big)
+				big=n;
+			i++;
+		}
+		sc.close();
+		System.out.println("Big:"+big);
+	}
+
+}
+
+do..while loop:
+---------------
+syntax:
+-------
+do
+{
+st-1;
+st-2;
+..
+..
+st-n;
+}
+while(condition);
+
+Note: if no {} then it considers only one statement
+
+WAP to print 1 to 10 numbers
+
+package mypackage;
+
+public class DoWhileDemo01 {
+	public static void main(String[] args) {
+		int i=1;
+		do
+		{
+			System.out.println(i);
+			i++;
+		}
+		while(i<=10);
+	}
+}
+
+In case of while loop the condition is checked before the statements where as in case of do..while loop the condition is check after the statements
+
+WAP to accept the current balance and display the following options/menu
+
+1.Deposit
+2.Withdraw
+3.Display Balance
+4.Exit
+
+The menu should display repeatedly until the user chooses Exit
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class Bank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int bal,amt,ch;
+		System.out.println("Enter Current balance:");
+		bal=sc.nextInt();
+		do
+		{
+			System.out.println("1.Deposit");
+			System.out.println("2.Withdraw");
+			System.out.println("3.Display Balance");
+			System.out.println("4.Exit");
+			ch=sc.nextInt();
+			switch(ch)
+			{
+			case 1:System.out.println("Enter the amount to deposit:");
+					amt=sc.nextInt();
+					bal=bal+amt;
+					break;
+			case 2:System.out.println("Enter amount to withdraw:");
+					amt=sc.nextInt();
+					if(amt>bal)
+						System.out.println("Insufficient Balance");
+					else
+						bal=bal-amt;
+					break;
+			case 3:
+				System.out.println("Current Balance:"+bal);
+				break;
+			case 4:
+				System.out.println("Thank you for banking with us");
+				break;
+			default:
+				System.out.println("Invalid choice");
+			}
+		}while(ch!=4);
+		sc.close();
+	}
+
+}
+
+Assignment-4:
+-------------
+
+1.WAP to find sum of even numbers and odd nubers from 1 to 100
+	int sumEven=0,sumOdd=0;
+
+2.WAP to find smallest of given 10 numbers
+
+3.WAP to find sum of digits of a given number
+	e.g., n=1234(1+2+3+4=10)
+
+for loop:
+---------
+syntax:
+-------
+for(initialization;condition;expression)
+{
+st-1;
+st-2;
+..
+..
+st-n;
+}
+Note: if no {} then it considers only one statement
+
+WAP to print numbers from 1 to 10
+
+package mypackage;
+
+public class ForDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1;i<=10;i++)
+		{
+			System.out.print(i+"  ");
+		}
+	}
+
+}
+
+WAP to find factorial of a given number
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		int n=sc.nextInt();
+		int f=1;
+		for(int i=n;i>=1;i--)
+		{
+			f=f*i;
+		}
+		System.out.println("Factorial:"+f);
+	}
+
+}
+
+
+WAP to display multiplication table for a given number
+n=5
+
+5*1=5
+5*2=10
+...
+..
+5*10=50
+
+break and continue:
+-------------------
+-break is used to come out of loop
+-continue is used to continue the loop
+
+WAP to check whether the given number is prime or not
+
+package mypackage;
+
+import java.util.Scanner;
+
+public class Prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		int n=sc.nextInt();
+		if(prime(n))
+			System.out.println("Prime");
+		else
+			System.out.println("Not Prime");
+	}
+	static boolean prime(int n)
+	{
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return true;
+	}
+
+}
+
+
+Arrays:
+-------
+An array is a collection of elements of similar type and stored in continuous memory locations
+
+int n1,n2,...n10;
+
+
+Types of Arrays:
+----------------
+-One Dimensional Array
+-MultiDimensional Array
+
+One Dimensional Array:
+----------------------
+Declaration syntax:
+-------------------
+datatype[] arrayname;
+		or
+datatype arrayname[];
+		or
+datatype []arrayname;
+
+e.g.,
+-----
+int[] n;
+String names[];
+double []salaries;
+
+int n[5];//error- since in Java, arrays are reference type
+
+Note:
+-----
+In Java memory allocation for reference type is done during runtime using new operator
+
+Memory Allocation:
+------------------
+int[] n=new int[5];
+
+Refer Diagram: Arrays.png
+
+WAP to find sum of the elements present in the array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

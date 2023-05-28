@@ -1,0 +1,750 @@
+Inheritance:
+------------
+The process of creating new classes from existing classes is called as Inheritance.
+
+In Java "extends" keyword is used to create a new class from an existing class.
+
+e.g.,
+
+		class Vehicle//Base or Super or Parent class
+		{
+			....
+			....
+		}
+		class Car extends Vehicle//Derived or Sub or Child class
+		{
+			....
+			....
+		}
+
+-Through inheritance we can achieve reusability of the code
+
+-Java does not support multiple inheritance due to ambiguities means in Java a class can extend only one class
+
+e.g.,
+
+		class A
+		{
+			....
+			....
+		}
+		class B
+		{
+			....
+			....
+		}
+		class C extends A,B{}//error-does not support multiple inheritance
+
+e.g.,
+
+Vehicle(Car/Bike/Bus)
+Fruit(Apple/Mango)
+Furniture(Table/Chair)
+Account(SavingAccount/CurrentAccount)
+
+-Inheritance is "is-a" relationship
+
+has-a relationship:
+-------------------
+e.g.,
+
+		class Employee
+		{
+			....
+			....
+		}
+		class Department extends Employee{}//not good
+
+Department has Employee
+
+
+Example on Inheritance:
+-----------------------
+
+package mypackage;
+
+class Base
+{
+	int i;
+	int j;
+	void inputIJ(int i,int j)
+	{
+		this.i=i;
+		this.j=j;
+	}
+	void displayIJ()
+	{
+		System.out.println("i:"+i+" "+"j:"+j);
+	}
+}
+class Derived extends Base
+{
+	int k;
+	void inputK(int k)
+	{
+		this.k=k;
+	}
+	void displayK()
+	{
+		System.out.println("k:"+k);
+	}
+}
+public class InheritanceDemo01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Base b=new Base();//b.i=0, b.j=0
+		b.inputIJ(10, 20);//b.i=10,b.j=20
+		b.displayIJ();//i=10,j=20
+		Derived d=new Derived();//d.i=0,d.j=0,d.k=0
+		d.inputIJ(30, 40);//d.i=30,d.j=40
+		d.inputK(50);//d.k=50
+		d.displayIJ();//i=30,j=40
+		d.displayK();//k=50
+		
+	}
+
+}
+
+Polymorphism:
+-------------
+Polymorphism means many forms
+
+Types:
+------
+Compile time
+	-Method Overloading
+
+Runtime
+	-Method Overriding
+
+Method Overloading:
+-------------------
+Defining multiple methods with same name but different signature.
+	Signature=>number of arguments/type of arguments
+
+e.g.,
+		area(int,int,int){...}
+		area(int,int){...}
+		area(float,float){...}
+
+-Applicable within the same class and subclasses
+
+Method Overriding:
+------------------
+Redefining the base class method in the derived class for new functionality.
+
+Applicable only in subclasses
+
+e.g.,
+
+		class Vehicle
+		{
+			void drive()
+			{
+				...
+			}
+		}
+		class Car extends Vehicle
+		{
+			void drive(int speed)//overloaded method
+			{
+				...
+			}
+			void drive()//overridden method
+			{
+				...
+			}
+		}
+		Car c=new Car();
+		c.drive();//invokes drive() of Car
+
+-If a derived class object invokes the overridden method then it will invoke the method present in the derived class.
+
+super reference:
+----------------
+super reference is used to refer to the base class members from derived class method 
+
+Example on super and method overriding:
+---------------------------------------
+
+package mypackage1;
+
+class Base
+{
+	int i;
+	int j;
+	void inputIJ(int i,int j)
+	{
+		this.i=i;
+		this.j=j;
+	}
+	void display()
+	{
+		System.out.println("i:"+i+" "+"j:"+j);
+	}
+}
+class Derived extends Base
+{
+	int k;
+	void inputK(int k)
+	{
+		this.k=k;
+	}
+	void display()
+	{
+		super.display();//invokes Base class display()
+		System.out.println("k:"+k);
+	}
+}
+public class InheritanceDemo02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Base b=new Base();
+		b.inputIJ(10, 20);
+		b.display();//i=10,j=20
+		Derived d=new Derived();
+		d.inputIJ(10, 20);
+		d.display();//i=10,j=20,k=0
+		d.inputK(30);
+		d.display();//i=10,j=20,k=30
+	}
+
+}
+
+Constructors in Inheritance:
+----------------------------
+super() is the first statement added to every constructor implicitly which invokes the base class default constructor
+
+To call parameterized constructor of base class from derived class constructor, call it explicitly
+
+super() must be the first statement in constructors
+
+Example:
+--------
+
+package mypackage2;
+
+class Base
+{
+	int i;
+	int j;
+	Base(int i,int j)//parameterized constructor
+	{
+		this.i=i;
+		this.j=j;
+	}
+	Base(){}//default constructor
+	void display()
+	{
+		System.out.println("i:"+i+" "+"j:"+j);
+	}
+}
+class Derived extends Base
+{
+	int k;
+
+	Derived(int k)
+	{
+		//super();//added implicitly - invokes Base class default constructor
+		super(30,40);//call it explicitly-invokes base class parameterized constructor
+		this.k=k;
+	}
+	Derived(int i,int j,int k)
+	{
+		super(i,j);
+		this.k=k;
+	}
+	void display()//overridden method
+	{
+		super.display();//Invokes Base class display()
+		System.out.println("k:"+k);
+	}
+}
+public class InheritanceDemo03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Base b=new Base(10,20);
+		b.display();//i=10,j=20
+		Derived d=new Derived(50);
+		d.display();
+		Derived d1=new Derived(60,70,80);
+		d1.display();	
+	}
+}
+
+final keyword:
+--------------
+
+final keyword can be used for the following
+		-variables(data members/local variables)
+		-methods
+		-classes
+
+final variable:
+---------------
+It is a constant means the value of the variable cannot be modified.
+
+e.g., 	final int MAX_VALUE=100;
+			MAX_VALUE=200;//error
+
+			final double PI=3.14;
+
+final method:
+-------------
+It cannot be overridden
+
+e.g.,
+			class Base
+			{
+				final void m1()
+				{
+				 	....
+					....
+				}
+			}
+			class Derived extends Base
+			{
+				void m1()//error
+				{
+					....
+					....
+				}
+			}
+
+final class
+-----------
+It cannot be derived
+
+e.g.
+
+		final class Base{}
+		class Derived extends Base{}//error
+
+predefined final class
+----------------------
+-System
+-String
+-Math
+
+Wrapper classes
+----------------
+-Byte
+-Short
+-Character
+-Integer
+-Long
+-Float
+-Double
+-Boolean
+
+What is the output?
+
+class Sample extends String{}//Error-String is final, cannot be subclassed
+
+
+Note:
+-----
+If a Base class reference refers to the Derived class object then it can invoke only overridden methods of subclass
+
+e.g.,
+
+	class Vehicle
+	{
+		void drive()
+		{
+			...
+			...
+		}
+	}
+	class Car extends Vehicle
+	{
+		void drive()//overridden method
+		{
+			...
+		}
+		void changeGear()
+		{
+			...
+		}
+	}
+	
+	Vehicle v=new Car();
+	v.drive()//invokes drive() of Car
+	v.changeGear();//Error
+
+	Car c=new Vehicle();//Error
+
+
+Example:
+--------
+
+package mypackage3;
+
+class Base
+{
+	int n=10;
+}
+class Derived extends Base
+{
+	int n=20;
+}
+public class InheritanceDemo04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Base b=new Base();
+		System.out.println(b.n);
+		Derived d=new Derived();
+		System.out.println(d.n);
+		Base b1=new Derived();
+		System.out.println(b1.n);
+	}
+
+}
+
+Abstract classes:
+-----------------
+It is used to form the rules/specification
+A method which is declared is called as abstract method
+An abstract class contains zero or more abstract methods
+
+e.g.,
+		abstract class Sample
+		{
+			void m1(){...}//defined or implemented or concrete method
+			abstract void m2();//declared method
+		}
+
+If a class extends an abstract class then we need to override all abstract methods else make the class as abstract
+
+e.g.,
+
+		class Sample1 extends Sample
+		{
+			void m2()
+			{
+				...
+			}
+			void m3()
+			{
+				...
+			}
+		}
+
+		absract class Sample2 extends Sample
+		{
+			void m4()
+			{
+				...
+			}
+		}
+
+We cannot create objects for abstract classes but we can create references referring to the subclass object
+
+e.g.,  Sample s=new Sample();//error
+		 Sample s1=new Sample1();//valid
+
+-Forces "is-a" relationship
+
+Example:
+--------
+
+package mypackage;
+
+abstract class Vehicle
+{
+	abstract void drive();
+	void applyBreak()
+	{
+		System.out.println("Applying Break");
+	}
+}
+class Car extends Vehicle
+{
+
+	@Override
+	void drive() {
+		// TODO Auto-generated method stub
+		System.out.println("Driving a Car");
+	}
+	void changeGear()
+	{
+		System.out.println("Changing Gear");
+	}	
+}
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Vehicle v=new Vehicle();//error
+		Vehicle v=new Car();
+		v.drive();
+		v.applyBreak();
+		//v.changeGear();//error
+		Car c=new Car();
+		c.changeGear();
+	}
+}
+
+Interfaces:
+-----------
+It is used to form the rules/specifications
+Does not force "is-a" relationship
+In an interface all data members are public, static and final by default
+In an interface all methods are public and abstract by default
+
+e.g.,
+		interface I1
+		{
+			[public static final] int MAX=100;
+			[public abstract] void m1();
+			[public abstract] void m2();
+		}
+
+		[]=>by default/optional
+
+If a class implements an interface then we need to override all abstract methods else make the class as abstract
+
+e.g.,
+		class C1 implements I1
+		{
+			void m1(){...}
+			void m2(){...}
+		}
+
+We cannot create objects for interfaces but we can create references referring to the derived class
+
+e.g.,
+		
+		I1 i=new I1();//error
+		I1 i=new C1();//valid
+
+A class can implement multiple interface
+
+e.g.,
+		interface I2
+		{
+			void m3();
+		}
+		class C2 implements I1,I2
+		{
+			void m1(){..}
+			void m2(){..}
+			void m3(){..}
+		}
+
+class to class => extends
+class to interface => implements
+interface to interface => extends
+
+e.g,  interface I3 extends I1{}
+
+interface to class =>error
+
+An interface can extend multiple interfaces
+
+e.g., 	
+		interface I4 extends I1,I2{}
+
+
+Note:
+-----
+From Java 8 version we can define methods in interfaces using default keyword
+From Java 9 version we can define private methods
+
+Example
+-------
+package mypackage;
+
+interface Shape
+{
+	void draw();
+	default void fill()
+	{
+		System.out.println("Filling");
+	}
+}
+class Circle implements Shape
+{
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		System.out.println("Drawing a Circle");
+	}
+	
+}
+public class InterfaceDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Shape s=new Shape();//error
+		Shape s=new Circle();
+		s.draw();
+		s.fill();
+	}
+
+}
+
+
+When implementing interface methods, the overridden methods should be public
+
+Note:
+-----
+abstract and final are illegal combination of modifiers
+
+e.g.,
+
+abstract final class Sample{}//error - abstract and final are illegal combination
+
+
+Inner Classes:
+--------------
+A class within a class is called as inner class
+
+e.g.,
+
+		class Outer
+		{
+			class Inner
+			{
+				....
+			}
+		}
+
+Example:1
+---------
+package mypackage;
+
+class Outer
+{
+	int m=100;
+	class Inner
+	{
+		void doStuff()
+		{
+			System.out.println("m:"+m);
+		}
+	}
+}
+public class InnerDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer.Inner innerObj=new Outer().new Inner();
+		innerObj.doStuff();
+	}
+
+}
+
+
+Example:2
+---------
+package mypackage1;
+
+class Outer
+{
+	private String msg="Hi Folks, How are you?";
+	void display() {
+		class Inner
+		{
+			void msg()
+			{
+				System.out.println(msg);
+			}
+		}
+		Inner in=new Inner();
+		in.msg();
+	}
+}
+public class InnerDemo02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer obj=new Outer();
+		obj.display();
+
+	}
+
+}
+
+Inner class is basically a safety mechanism since it is hidden from other classes in its outer class.
+
+To make instance variable not available outside the class, we use "private" access specifier before the variables.This is how we provide security mechanism for variables.
+
+Similarly, in some cases, we want to provide security for the entire class. In this case we can use "private" access specifier before the class??
+
+As it is illegal to use "private" for a class. Hence we define a class inside another class to provide security.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
