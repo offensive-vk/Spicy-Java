@@ -1,7 +1,5 @@
-package com.apex.relationship;
 public class Address
 {
-	
 	String street;
 	String city;
 	String state;
