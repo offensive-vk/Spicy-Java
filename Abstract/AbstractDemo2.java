@@ -1,4 +1,4 @@
-package com.apex2.bcaa;
+package Abstract;
 abstract class MediaPlayer
 {
 	void playAudio() {System.out.println("can play audio");};

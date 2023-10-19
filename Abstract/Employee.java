@@ -1,5 +1,4 @@
-package com.apex.bcaa.abstractdemo;
-
+package Abstract;
 abstract public class Employee {
 	int eid;
 	String name;

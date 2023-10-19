@@ -1,5 +1,6 @@
-package com.apex.bcaa.abstractdemo;
+package Abstract;
 import java.util.Scanner;
+
 abstract class Shape
 {
 	Scanner sc=new Scanner(System.in);
