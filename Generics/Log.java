@@ -1,5 +1,8 @@
 package Generics;
 /**
+ * @author Vedansh Khandelwal
+ * @since Oct 28 2023
+ * @description
  * The `Log` class is a utility class that provides methods for logging messages and data.
  * It includes a `Message` method for printing messages to the console, and a `log` method for logging data of any type.
  */
