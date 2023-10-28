@@ -1,7 +1,5 @@
 package Generics;
 
-import java.util.Map;
-
 public class Hello {
     public static <Type> void displayMessage(Type message) {
         System.out.println(message);

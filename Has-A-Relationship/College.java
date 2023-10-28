@@ -1,4 +1,4 @@
-package com.apex.relationship;
+
 public class College {
 	String name;
 	Address addr;
