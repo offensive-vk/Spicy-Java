@@ -74,7 +74,7 @@ public class Life {
         Husband husband = new Husband("Madhav", 30);
         husband.marry(wife);
         wife.addChild("John", 5);
-        wife.addChild("Clair", 3);
+        wife.addChild("Richard", 3);
 
         System.out.println(husband.getInfo());
         System.out.println("Children: " + wife.getKidsInfo());
