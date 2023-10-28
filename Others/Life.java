@@ -1,7 +1,7 @@
+
 package Others;
 import java.util.ArrayList;
 import java.util.List;
-
 class Kid {
     private String name;
     private int age;
@@ -68,7 +68,12 @@ class Husband {
         }
     }
 }
-
+/**
+ * @author Vedansh Khandelwal.
+ * @since Life
+ * @version End
+ * @hidden
+ */
 public class Life {
     public static void main(String[] args) {
         Wife wife = new Wife("Sneha", 27);
