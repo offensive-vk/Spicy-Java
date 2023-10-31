@@ -11,7 +11,12 @@ public class GenericPair {
         System.out.println("Pair of Strings: " + stringPair.getFirst() + ", " + stringPair.getSecond());
     }
 }
-
+/**
+ * Represents a generic pair of objects.
+ * 
+ * @param <F> the type of the first object in the pair
+ * @param <S> the type of the second object in the pair
+ */
 class Pair<F, S> {
     private F first;
     private S second;
