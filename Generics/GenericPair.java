@@ -12,20 +12,20 @@ public class GenericPair {
     }
 }
 
-class Pair<T, U> {
-    private T first;
-    private U second;
+class Pair<F, S> {
+    private F first;
+    private S second;
 
-    public Pair(T first, U second) {
+    public Pair(F first, S second) {
         this.first = first;
         this.second = second;
     }
 
-    public T getFirst() {
+    public F getFirst() {
         return first;
     }
 
-    public U getSecond() {
+    public S getSecond() {
         return second;
     }
 }
