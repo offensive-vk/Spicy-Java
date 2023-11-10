@@ -1,5 +1,5 @@
 package Generics;
-interface Pair<K, V> {
+interface Pair<K, V > {
     K getKey();
     V getValue();
 }
