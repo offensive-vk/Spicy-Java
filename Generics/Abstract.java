@@ -2,7 +2,12 @@ package Generics;
 
 public final class Abstract {
     public static void main(String[] args) {
-        
+
+        Parent<Boolean> P = new Parent<>();
+        System.out.println(P.getLength());
+        P.SomeRandom(false);
+        P.SomeOtherRandom(true);
+    
     }
 }
 
