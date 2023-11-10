@@ -7,7 +7,12 @@ public final class Abstract {
         System.out.println(P.getLength());
         P.SomeRandom(false);
         P.SomeOtherRandom(true);
-    
+        Display();
+    }
+    public final static void Display(){
+        Parent<String> X = new Parent<>();
+        X.SomeOtherRandom("Display Function.");
+        System.out.println(X.getLength());
     }
 }
 
@@ -73,7 +78,9 @@ abstract class Human<T> {
      */
     abstract int getLength();
 }
-
+/**
+ * @author Vedansh
+ */
 class Parent<T> extends Human<T> {
     public Parent(){
         this.data = new int[100];
@@ -87,7 +94,7 @@ class Parent<T> extends Human<T> {
         System.out.println(someOther);
     }
     @Override
-    final int getLength(){
+    protected final int getLength(){
         return this.data.length;
     }
 }
