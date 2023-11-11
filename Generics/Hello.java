@@ -1,5 +1,7 @@
 package Generics;
 
+import java.util.Scanner;
+
 public class Hello {
     public static <Type> void displayMessage(Type message) {
         System.out.println(message);
@@ -11,11 +13,14 @@ public class Hello {
         return data;
     }
     public static void main(String[] args) {
-        displayMessage("Hello, Generics!");
-        displayMessage(42);
-        displayMessage(3.14);
 
+        displayMessage("Hello, Generics!");
+        displayMessage(424);
+        displayMessage(3.141);
+        Scanner sc = new Scanner(System.in);
         doSomething(new Object());
+
+        sc.close();
     }
     
 }
