@@ -1,4 +1,4 @@
-package com.apex.inheritance;
+package inheritance;
 
 class Parent
 {

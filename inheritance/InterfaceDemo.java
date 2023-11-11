@@ -1,5 +1,4 @@
-package com.apex.bcab.interfacedemo;
-
+package inheritance;
 interface ICalc
 {
 	String projectVersion="1.0";

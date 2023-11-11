@@ -1,4 +1,4 @@
-package com.apex.inheritance;
+package inheritance;
 public class DaillyWageEmployee extends Employee {
 	
 float salary;
