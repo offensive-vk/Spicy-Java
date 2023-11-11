@@ -1,6 +1,6 @@
 import java.util.*;
 // A Program to Get Size and Elements in a Array and Display the sum of array.
-public class sum {
+public class Sum {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int sum = 0;
