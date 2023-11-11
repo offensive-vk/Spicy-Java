@@ -1,12 +1,13 @@
 import java.util.Scanner;
 public class days{
 
-  public static void main(String[] args)
+public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
         System.out.print("Input number: ");
         int day = in.nextInt();
         System.out.println(getDayName(day));
+        in.close();
     }
     // Get the name for the Week
     public static String getDayName(int day) {
