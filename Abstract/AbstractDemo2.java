@@ -22,15 +22,14 @@ class SoundRecorder extends MediaPlayer
 }
 
 public class AbstractDemo2 {
-
 	public static void main(String[] args) {
 		
-		VlcPlayer ob=new VlcPlayer();
+		VlcPlayer ob = new VlcPlayer();
 		ob.playVideo();
 		ob.playAudio();
 		
-		SoundRecorder ob1=new SoundRecorder();
+		SoundRecorder ob1 = new SoundRecorder();
 		ob1.playVideo();
 		ob1.playAudio();
-	    }
+	}
 }

@@ -12,7 +12,7 @@ public class Hello {
         System.out.println("-> "+data+" \n ");
         return data;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         displayMessage("Hello, Generics!");
         displayMessage(424);
