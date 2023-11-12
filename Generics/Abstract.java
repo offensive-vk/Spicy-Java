@@ -14,6 +14,10 @@ public final class Abstract extends Parent<Integer>{
         X.SomeOtherRandom("Display Function.");
         System.out.println(X.getLength());
     }
+    public final static void Kid(){
+        Kid<Integer> K = new Kid<>();
+        System.out.println("Verification of Kid class: "+K.VerifyKid(K));
+    }
 }
 
 /**
@@ -107,4 +111,10 @@ final class Kid<X> extends Parent<String>{
         System.out.printf("%s constructor called ", className);
     }
     public Kid(){}
+    public final Boolean VerifyKid(Kid<X> kid){
+        if(kid instanceof Kid){
+            return true;
+        }
+        return false;
+    }
 }
