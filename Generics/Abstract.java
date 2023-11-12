@@ -1,6 +1,6 @@
 package Generics;
 
-public final class Abstract {
+public final class Abstract extends Parent<Integer>{
     public static void main(String[] args) {
 
         Parent<Boolean> P = new Parent<>();
@@ -102,9 +102,9 @@ class Parent<T> extends Human<T> {
 final class Kid<X> extends Parent<String>{
     public final int id = 01;
     private final static String className = "Kid Class";
-    
-    public Kid(X val){
 
+    public Kid(X name){
+        System.out.printf("%s constructor called ", className);
     }
     public Kid(){}
 }
