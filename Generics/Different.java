@@ -1,6 +1,10 @@
 package Generics;
-
-public class Different {
+/**
+ * Default Class for Execution
+ * @author Vedansh
+ * @category final
+ */
+public final class Different {
     final static int DEFAULT = 100;
     public static <T> void performAction(final T value) {
 
@@ -17,7 +21,7 @@ public class Different {
 
     public static void main(String[] args) {
 
-        performAction("Hello, World!");
+        performAction("Hello, Users !");
 
         performAction(true);
 
