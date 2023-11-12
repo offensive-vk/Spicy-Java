@@ -8,18 +8,22 @@ public class Different {
             System.out.println("Found String Type: " + value);
         } else if (value instanceof Boolean) {
             System.out.println("Found Boolean Type: " + value);
+        } else if (value instanceof Different) {
+            System.out.println("Found Different Type: " + value);
         } else {
             System.out.println("Default / Unknown Type: " + value);
         }
     }
 
     public static void main(String[] args) {
-        
+
         performAction("Hello, World!");
 
         performAction(true);
 
         performAction(42);
+
+        performAction(new Different());
     }
 }
 
