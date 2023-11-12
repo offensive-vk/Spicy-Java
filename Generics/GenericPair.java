@@ -25,8 +25,9 @@ class Pair<F, S> {
         this.first = first;
         this.second = second;
     }
-    public Pair() {
-
+    public Pair() { 
+        System.out.println();
+        System.out.println(this.hashCode());
     }
     public F getFirst() {
         return first;
