@@ -100,6 +100,9 @@ class Parent<T> extends Human<T> {
 }
 
 final class Kid<X> extends Parent<String>{
+    public final int id = 01;
+    private final static String className = "Kid Class";
+    
     public Kid(X val){
 
     }
