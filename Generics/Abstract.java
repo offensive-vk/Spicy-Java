@@ -98,3 +98,10 @@ class Parent<T> extends Human<T> {
         return this.data.length;
     }
 }
+
+final class Kid<X> extends Parent<String>{
+    public Kid(X val){
+
+    }
+    public Kid(){}
+}
