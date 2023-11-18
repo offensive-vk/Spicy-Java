@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="400" width="400" />
+<img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg" height="300" width="300" />
 </div>
 
 # **What is Java**? 
