@@ -41,18 +41,23 @@ class Management<M> implements SpecialStudent<M> {
     public M SpecialData(SpecialStudent<M> Student){
         return null;
     }
+    @Override
     public void setSpecialID(String ID){
 
     }
+    @Override
     public final M setDetails() {
         return null;
     }
+    @Override
     public final M getDetails(RegularStudent<M> Student) {
         return null;
     }
+    @Override
     public final void addStudent(RegularStudent<M> Student) {
 
     }
+    @Override
     public final void deleteStudent(RegularStudent<M> Student) {
 
     }
