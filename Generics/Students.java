@@ -1,7 +1,14 @@
 package Generics;
 
+import java.util.Scanner;
+
 public class Students {
     public static void main(String[] args) {
+        
+        Management<Integer> One = new Management<>("Manish", 8023, "IT");
+        RegularStudent<Integer> R;
+        SpecialStudent<Integer> S;
+
         
     }
 }
@@ -23,27 +30,38 @@ interface RegularStudent<R> extends Student {
 interface SpecialStudent<S> extends RegularStudent<S> {
     String SpecialID = "";
     public abstract S SpecialData(SpecialStudent<S> Student);
-    public abstract void setSpecialID(String ID);
+    public abstract void setSpecialID(SpecialStudent<S> Student);
 }
+class Special implements SpecialStudent<String>{
 
+}
+class Regular implements RegularStudent<String> {
+
+}
 class Management<M> implements SpecialStudent<M> {
-    
-    public String name = "";
-    public Integer id = 0;
-    public String section = "";
 
-    public Management(String n, Integer i, String s ){
-        this.name = n;
-        this.id = i;
-        this.section = s;
+    protected static Scanner sc = new Scanner(System.in);
+    private String name = "";
+    private Integer id = 0;
+    private String section = "";
+    private String SpecialID;
+
+    public Management(String Name, Integer ID, String Section ){
+        this.name = Name;
+        this.id = ID;
+        this.section = Section;
     }
     @Override
     public M SpecialData(SpecialStudent<M> Student){
         return null;
     }
     @Override
-    public void setSpecialID(String ID){
-
+    public void setSpecialID(SpecialStudent<M> student){
+        if(student instanceof SpecialStudent) {
+            System.out.println("Enter Your New Special ID : ");
+            String ID = sc.nextLine();
+            this.SpecialID = ID;
+        }
     }
     @Override
     public final M setDetails() {
