@@ -16,67 +16,94 @@ public class Students {
  * @root Interface
  * Normal Student Interface.
  */
-interface Student {
+interface Student<X> {
     String name = "";
     Integer id = 0;
     String section = "";
 }
-interface RegularStudent<R> extends Student {
-    public abstract R setDetails();
-    public abstract R getDetails(RegularStudent<R> Student);
-    public abstract void addStudent(RegularStudent<R> Student);
-    public abstract void deleteStudent(RegularStudent<R> Student);
+interface RegularStudent<R> extends Student<R> {
+    public abstract Regular setDetails();
+    public abstract Regular getDetails(Regular Student);
+    public abstract void addStudent(Regular Student);
+    public abstract void deleteStudent(Regular Student);
 }
 interface SpecialStudent<S> extends RegularStudent<S> {
-    String SpecialID = "";
-    public abstract S SpecialData(SpecialStudent<S> Student);
-    public abstract void setSpecialID(SpecialStudent<S> Student);
+    public abstract void SpecialData(Special Student);
+    public abstract void setSpecialID(Special Student);
 }
-class Special implements SpecialStudent<String>{
-
-}
-class Regular implements RegularStudent<String> {
-
-}
-class Management<M> implements SpecialStudent<M> {
-
-    protected static Scanner sc = new Scanner(System.in);
-    private String name = "";
-    private Integer id = 0;
-    private String section = "";
-    private String SpecialID;
-
-    public Management(String Name, Integer ID, String Section ){
+class Special extends Management<String> implements SpecialStudent<String> {
+    
+    public Special(String Name, Integer ID, String Section ){
         this.name = Name;
         this.id = ID;
         this.section = Section;
     }
+    String SpecialID = "";
     @Override
-    public M SpecialData(SpecialStudent<M> Student){
-        return null;
+    public final void SpecialData(Special Student){
+
     }
     @Override
-    public void setSpecialID(SpecialStudent<M> student){
+    public final void setSpecialID(Special student){
         if(student instanceof SpecialStudent) {
             System.out.println("Enter Your New Special ID : ");
             String ID = sc.nextLine();
             this.SpecialID = ID;
         }
+        System.err.print("Passed Student is Not of a Special Type.");
     }
     @Override
-    public final M setDetails() {
-        return null;
+    public Regular setDetails() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDetails'");
     }
     @Override
-    public final M getDetails(RegularStudent<M> Student) {
-        return null;
+    public Regular getDetails(Regular Student) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDetails'");
     }
     @Override
-    public final void addStudent(RegularStudent<M> Student) {
+    public void addStudent(Regular Student) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addStudent'");
+    }
+    @Override
+    public void deleteStudent(Regular Student) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+    }
+}
+class Regular extends Management implements RegularStudent<String> {
+    String RegularID;
+    
+    @Override
+    public final void setDetails() {
+        
+    }
+    @Override
+    public final void getDetails(Regular Student) {
+        
+    }
+    @Override
+    public final void addStudent(Regular Student) {
 
     }
     @Override
-    public final void deleteStudent(RegularStudent<M> Student) {
+    public final void deleteStudent(Regular Student) {
 
     }
+}
+class Management<M> extends Special{
+
+    protected static Scanner sc = new Scanner(System.in);
+    private String name = "";
+    private Integer id = 0;
+    private String section = "";
+
+    // public Management(String Name, Integer ID, String Section ){
+    //     this.name = Name;
+    //     this.id = ID;
+    //     this.section = Section;
+    // }
+
 }
