@@ -34,21 +34,19 @@ interface SpecialStudent<S> extends RegularStudent<S> {
 abstract class Council {
     protected static Scanner sc = new Scanner(System.in);
     protected String name = "";
-    protected Integer id = 0;
+    protected Integer id;
     protected String section = "";
 
 }
 class Special extends Council implements SpecialStudent<String> {
     
-    public Special(String Name, Integer ID, String Section ){
-        this.name = Name;
-        this.id = ID;
-        this.section = Section;
+    private String SpecialID;
+    public Special(String _id){
+        this.SpecialID = _id;
     }
-    String SpecialID = "";
     @Override
-    public final void SpecialData(Special Student){
-
+    public final void SpecialData(Special student){
+        //Student.SpecialID;
     }
     @Override
     public final void setSpecialID(Special student){
