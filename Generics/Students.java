@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Students {
     public static void main(String[] args) {
-        Special A = new Special("Bruh", "John Doe", "A", 123);
-        Regular R = new Regular(8064, "Jane Wick", "B", 456);
+        Special A = new Special("BS5GS7", "John Wick", "A", 123);
+        Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
     }
 }
 
@@ -76,16 +76,17 @@ class Special extends Council implements SpecialStudent<String> {
 class Regular extends Council implements RegularStudent<String> {
     String RegularID;
 
-    public Regular(Integer id, String name, String section, Integer regId) {
+    public Regular(String _id, String name, String section, Integer id) {
         super.id = id;
         super.name = name;
         super.section = section;
-        this.RegularID = regId.toString();
+        this.RegularID = _id;
     }
 
     @Override
     public final void setDetails(Regular student) {
         // Your implementation here
+        System.out.println();
     }
 
     @Override
