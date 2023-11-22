@@ -22,8 +22,8 @@ interface Student<X> {
     String section = "";
 }
 interface RegularStudent<R> extends Student<R> {
-    public abstract Regular setDetails();
-    public abstract Regular getDetails(Regular Student);
+    // public abstract Regular setDetails();
+    // public abstract Regular getDetails(Regular Student);
     public abstract void addStudent(Regular Student);
     public abstract void deleteStudent(Regular Student);
 }
@@ -31,7 +31,14 @@ interface SpecialStudent<S> extends RegularStudent<S> {
     public abstract void SpecialData(Special Student);
     public abstract void setSpecialID(Special Student);
 }
-class Special extends Management<String> implements SpecialStudent<String> {
+abstract class Council {
+    protected static Scanner sc = new Scanner(System.in);
+    protected String name = "";
+    protected Integer id = 0;
+    protected String section = "";
+
+}
+class Special extends Council implements SpecialStudent<String> {
     
     public Special(String Name, Integer ID, String Section ){
         this.name = Name;
@@ -73,11 +80,11 @@ class Special extends Management<String> implements SpecialStudent<String> {
         throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
     }
 }
-class Regular extends Management implements RegularStudent<String> {
+class Regular extends Council implements RegularStudent<String> {
     String RegularID;
     
     @Override
-    public final void setDetails() {
+    public final void setDetails(Regular Student) {
         
     }
     @Override
@@ -92,18 +99,4 @@ class Regular extends Management implements RegularStudent<String> {
     public final void deleteStudent(Regular Student) {
 
     }
-}
-class Management<M> extends Special{
-
-    protected static Scanner sc = new Scanner(System.in);
-    private String name = "";
-    private Integer id = 0;
-    private String section = "";
-
-    // public Management(String Name, Integer ID, String Section ){
-    //     this.name = Name;
-    //     this.id = ID;
-    //     this.section = Section;
-    // }
-
 }
