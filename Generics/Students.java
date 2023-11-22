@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 public class Students {
     public static void main(String[] args) {
-        
-        Management<Integer> One = new Management<>("Manish", 8023, "IT");
-        RegularStudent<Integer> R;
-        SpecialStudent<Integer> S;
-
+        Special A = new Special("Bruh");
+        Regular R = new Regular(8064);
         
     }
 }
@@ -24,8 +21,8 @@ interface Student<X> {
 interface RegularStudent<R> extends Student<R> {
     // public abstract Regular setDetails();
     // public abstract Regular getDetails(Regular Student);
-    public abstract void addStudent(Regular Student);
-    public abstract void deleteStudent(Regular Student);
+    public abstract void addStudent(Regular student);
+    public abstract void deleteStudent(Regular student);
 }
 interface SpecialStudent<S> extends RegularStudent<S> {
     public abstract void SpecialData(Special Student);
@@ -41,8 +38,14 @@ abstract class Council {
 class Special extends Council implements SpecialStudent<String> {
     
     private String SpecialID;
-    public Special(String _id){
+    public Special(String _id, String name, String section, Integer id){
         this.SpecialID = _id;
+        super.id = id;
+        super.name = name;
+        super.section = section;
+    }
+    public final void ManualFill(){
+
     }
     @Override
     public final void SpecialData(Special student){
@@ -63,17 +66,17 @@ class Special extends Council implements SpecialStudent<String> {
         throw new UnsupportedOperationException("Unimplemented method 'setDetails'");
     }
     @Override
-    public Regular getDetails(Regular Student) {
+    public Regular getDetails(Regular student) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getDetails'");
     }
     @Override
-    public void addStudent(Regular Student) {
+    public void addStudent(Regular student) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'addStudent'");
     }
     @Override
-    public void deleteStudent(Regular Student) {
+    public void deleteStudent(Regular student) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
     }
