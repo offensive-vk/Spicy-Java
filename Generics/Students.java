@@ -7,9 +7,8 @@ public class Students {
     public static void main(String[] args) {
         Special A = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
-        // A.ManualFill();
-        A.setSpecialID(A);
-        System.out.println(R.hashCode());
+
+
     }
 }
 
