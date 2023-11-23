@@ -7,7 +7,7 @@ public class Students {
     public static void main(String[] args) {
         Special A = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
-
+        Council.displayStudents();
 
     }
 }
@@ -33,8 +33,12 @@ abstract class Council {
     protected String name = "";
     protected Integer id;
     protected String section = "";
-    protected ArrayList<Regular> AllRegular = new ArrayList<>();
+    protected static ArrayList<Regular> AllRegular = new ArrayList<>();
     protected ArrayList<Special> AllSpecial = new ArrayList<>();
+
+    public static final void displayStudents(){
+        System.out.println(Council.AllRegular);
+    }
 }
 
 class Special extends Council implements SpecialStudent<String> {
@@ -50,7 +54,7 @@ class Special extends Council implements SpecialStudent<String> {
 
     public final void ManualFill() {
         System.out.printf("Your Current Special ID is: %s\n", this.SpecialID);
-        System.out.println("Do you wish to edit it? ");
+        System.out.print("Do you wish to edit it? true/false.");
         Boolean c = sc.nextBoolean();
         if(c) this.SpecialID = sc.next();
         if(!c) System.out.println("Nothing Changed ");
@@ -58,7 +62,7 @@ class Special extends Council implements SpecialStudent<String> {
 
     @Override
     public final void SpecialData(Special student) {
-        
+
     }
 
     @Override
@@ -76,12 +80,14 @@ class Special extends Council implements SpecialStudent<String> {
 
     @Override
     public void addStudent(Regular student) {
-        // Your implementation here
+        System.out.println("Adding {student} to Regular Student List.");
+        super.AllRegular.add(student);
     }
 
     @Override
     public void deleteStudent(Regular student) {
-        // Your implementation here
+        System.out.println("Removed {student} from Regular Student List.");
+        super.AllRegular.remove(student);
     }
 }
 class Regular extends Council implements RegularStudent<String> {
