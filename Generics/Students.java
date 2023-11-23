@@ -6,7 +6,9 @@ public class Students {
     public static void main(String[] args) {
         Special A = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
-        A.ManualFill();
+        // A.ManualFill();
+        A.setSpecialID(A);
+        System.out.println(R.hashCode());
     }
 }
 
@@ -59,13 +61,15 @@ class Special extends Council implements SpecialStudent<String> {
 
     @Override
     public final void setSpecialID(Special student) {
-        if (student instanceof SpecialStudent) {
+        if (student instanceof Special) {
             System.out.println("Enter Your New Special ID : ");
             String ID = sc.nextLine();
             this.SpecialID = ID;
         } else {
             System.err.print("Passed Student is Not of a Special Type.");
         }
+        System.out.println("Your New Special ID : "+this.SpecialID);
+
     }
 
     @Override
