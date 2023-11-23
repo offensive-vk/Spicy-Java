@@ -57,13 +57,15 @@ class Special extends Council implements SpecialStudent<String> {
         System.out.printf("Your Current Special ID is: %s\n", this.SpecialID);
         System.out.print("Do you wish to edit it? true/false.");
         Boolean c = sc.nextBoolean();
-        if(c) this.SpecialID = sc.next();
         if(!c) System.out.println("Nothing Changed ");
     }
 
     @Override
     public final void SpecialData(Special student) {
-
+        // System.out.printf("Special ID : %s\n", student.SpecialID);
+        // System.out.printf("ID : %s\n", student.id);
+        // System.out.printf("Student Name : %s\n", student.name);
+        // System.out.printf("Student Section : %s\n", student.section);
     }
 
     @Override
