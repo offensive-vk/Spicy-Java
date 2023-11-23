@@ -1,5 +1,6 @@
 package Generics;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Students {
@@ -33,6 +34,7 @@ abstract class Council {
     protected String name = "";
     protected Integer id;
     protected String section = "";
+    protected static ArrayList<Regular> AllStudents = new ArrayList<>();
 }
 
 class Special extends Council implements SpecialStudent<String> {
@@ -51,7 +53,7 @@ class Special extends Council implements SpecialStudent<String> {
         System.out.println("Do you wish to edit it? ");
         Boolean c = sc.nextBoolean();
         if(c) this.SpecialID = sc.next();
-        if(!c) System.out.println("Done. ");
+        if(!c) System.out.println("Nothing Changed ");
     }
 
     @Override
@@ -92,16 +94,16 @@ class Regular extends Council implements RegularStudent<String> {
         this.RegularID = _id;
     }
 
-    @Override
-    public final void setDetails(Regular student) {
-        // Your implementation here
-        System.out.println();
-    }
+    // @Override
+    // public final void setDetails(Regular student) {
+    //     // Your implementation here
+    //     System.out.println();
+    // }
 
-    @Override
-    public final void getDetails(Regular student) {
-        // Your implementation here
-    }
+    // @Override
+    // public final void getDetails(Regular student) {
+    //     // Your implementation here
+    // }
 
     @Override
     public final void addStudent(Regular student) {
