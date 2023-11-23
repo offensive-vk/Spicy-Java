@@ -33,7 +33,8 @@ abstract class Council {
     protected String name = "";
     protected Integer id;
     protected String section = "";
-    protected static ArrayList<Regular> AllStudents = new ArrayList<>();
+    protected ArrayList<Regular> AllRegular = new ArrayList<>();
+    protected ArrayList<Special> AllSpecial = new ArrayList<>();
 }
 
 class Special extends Council implements SpecialStudent<String> {
@@ -57,7 +58,7 @@ class Special extends Council implements SpecialStudent<String> {
 
     @Override
     public final void SpecialData(Special student) {
-        // Your implementation here
+        
     }
 
     @Override
