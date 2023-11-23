@@ -6,6 +6,7 @@ public class Students {
     public static void main(String[] args) {
         Special A = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
+        A.ManualFill();
     }
 }
 
@@ -44,7 +45,11 @@ class Special extends Council implements SpecialStudent<String> {
     }
 
     public final void ManualFill() {
-        // Your implementation here
+        System.out.printf("Your Current Special ID is: %s\n", this.SpecialID);
+        System.out.println("Do you wish to edit it? ");
+        Boolean c = sc.nextBoolean();
+        if(c) this.SpecialID = sc.next();
+        if(!c) System.out.println("Done. ");
     }
 
     @Override
