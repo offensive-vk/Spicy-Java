@@ -1,8 +1,7 @@
 package Data_Structures;
 
-public class ArrayList {
+public class ArrayListExample {
     public static void main(String[] args) {
-
-
+        
     }
 }
