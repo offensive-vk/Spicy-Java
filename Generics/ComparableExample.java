@@ -35,3 +35,25 @@ class GenericMethod {
     }
 }
 
+public class GenericConstraintsExample {
+    public static void main(String[] args) {
+        // Using GenericBox with Integer values
+        GenericBox<Integer> intBox1 = new GenericBox<>(10);
+        GenericBox<Integer> intBox2 = new GenericBox<>(20);
+
+        System.out.println("Integer Boxes are equal: " + intBox1.isEqualTo(intBox2));
+
+        // Using GenericBox with String values
+        GenericBox<String> strBox1 = new GenericBox<>("Hello");
+        GenericBox<String> strBox2 = new GenericBox<>("World");
+
+        System.out.println("String Boxes are equal: " + strBox1.isEqualTo(strBox2));
+
+        // Using the generic method to find the maximum value
+        Integer[] intArray = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3};
+        System.out.println("Max Integer value: " + GenericMethod.findMax(intArray));
+
+        String[] strArray = {"apple", "banana", "orange", "grape"};
+        System.out.println("Max String value: " + GenericMethod.findMax(strArray));
+    }
+}
