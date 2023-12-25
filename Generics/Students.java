@@ -1,14 +1,15 @@
 package Generics;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Students {
     public static void main(String[] args) {
+
         Special S = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
         Council.displayStudents();
         S.SpecialData(S);
+        R.displayStudents();
         
     }
 }
