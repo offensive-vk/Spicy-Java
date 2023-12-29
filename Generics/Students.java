@@ -1,14 +1,15 @@
 package Generics;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Students {
     public static void main(String[] args) {
+
         Special S = new Special("BS5GS7", "John Wick", "A", 123);
         Regular R = new Regular("S0GANG", "Jane Smith", "A", 6543);
         Council.displayStudents();
         S.SpecialData(S);
+        R.displayStudents();
         
     }
 }
@@ -62,10 +63,10 @@ class Special extends Council implements SpecialStudent<String> {
 
     @Override
     public final void SpecialData(Special student) {
-        // System.out.printf("Special ID : %s\n", student.SpecialID);
-        // System.out.printf("ID : %s\n", student.id);
-        // System.out.printf("Student Name : %s\n", student.name);
-        // System.out.printf("Student Section : %s\n", student.section);
+        System.out.printf("Special ID : %s\n", student.SpecialID);
+        System.out.printf("ID : %s\n", student.id);
+        System.out.printf("Student Name : %s\n", student.name);
+        System.out.printf("Student Section : %s\n", student.section);
     }
 
     @Override

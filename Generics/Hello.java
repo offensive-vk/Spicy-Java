@@ -1,5 +1,4 @@
 package Generics;
-
 import java.util.Scanner;
 
 public class Hello {
@@ -12,14 +11,15 @@ public class Hello {
         System.out.println("-> "+data+" \n ");
         return data;
     }
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         displayMessage("Hello, Generics!");
         displayMessage(424);
         displayMessage(3.141);
         Scanner sc = new Scanner(System.in);
         doSomething(new Object());
-
+        doSomething(null);
+        doSomething("Doing Something.");
         sc.close();
     }
     
