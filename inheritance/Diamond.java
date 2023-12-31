@@ -24,3 +24,26 @@ public class Diamond extends B, C { // Diamond Inheritance
         d.display();
     }
 }
+
+interface A {
+    void display();
+}
+
+class B implements A {
+    public void display() {
+        System.out.println("Class B");
+    }
+}
+
+class C implements A {
+    public void display() {
+        System.out.println("Class C");
+    }
+}
+
+class D implements B, C {
+    public static void main(String[] args) {
+        D d = new D();
+        d.display();
+    }
+}
