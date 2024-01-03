@@ -6,7 +6,8 @@ package Generics;
  */
 public final class Different {
     final static int DEFAULT = 100;
-    public static <T> void performAction(final T value) {
+    public static final char PUBLIC_KEY = "9GF0BA-HP[A9G]";
+    public static <T> void performSomething(final T value) {
 
         if (value instanceof String) {
             System.out.println("Found String Type: " + value);
@@ -21,13 +22,13 @@ public final class Different {
 
     public static void main(String[] args) {
 
-        performAction("Hello, Users !");
+        performSomething("Hello, Users !");
 
-        performAction(true);
+        performSomething(true);
 
-        performAction(42);
+        performSomething(42);
 
-        performAction(new Different());
+        performSomething(new Different());
     }
 }
 
