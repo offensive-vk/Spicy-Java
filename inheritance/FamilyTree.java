@@ -71,7 +71,18 @@ public class FamilyTree {
             case 1:
                 H.wake();
                 break;
-        
+            case 2:
+                H.drink();
+                break;
+            case 3:
+                H.breath();
+                break;
+            case 4:
+                H.speak();
+                break;
+            case 5:
+                H.die();
+                break;
             default:
                 System.out.println("OOPS ! Invalid Choice.. \n");
                 break;
