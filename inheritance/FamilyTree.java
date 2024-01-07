@@ -26,16 +26,16 @@ class HumanConstructor implements Human {
         System.out.println(this.name+" is Sleeping.");
     }
     public final void speak() {
-        System.out.println("Human is Speaking.");
+        System.out.println(this.name+" is Speaking.");
     }
     public final void breath() {
-        System.out.println("Human is Breathing.");
+        System.out.println(this.name+" is Breathing.");
     }
     public final void drink() {
-        System.out.println("Human is Drinking (Water/Other).");
+        System.out.println(this.name+" is Drinking (Water/Other).");
     }
     public final void die() {
-        System.out.println("Human is going to DIE. (MAX_AGE Reached).");
+        System.out.println(this.name+" is going to DIE. (MAX_AGE Reached).");
     }
 }
 public class FamilyTree {
@@ -46,9 +46,9 @@ public class FamilyTree {
         String n = sc.nextLine();
         System.out.println("Please Enter Your Age: ");
         int a = sc.nextInt();
-        System.out.println("\n=========\n===============\n");
+        // System.out.println("\n=========\n===============\n");
         System.out.println("Please Enter Your Gender: ");
-        String g = sc.nextLine();
+        String g = sc.next();
 
         HumanConstructor H = new HumanConstructor(n, g, a);
         H.sleep();
