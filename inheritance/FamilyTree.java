@@ -8,8 +8,18 @@ interface Human {
 
 }
 
-class Human implements Human {
-    
+class HumanConstructor implements Human {
+    String name;
+    String gender;
+    int age;
+
+    public HumanConstructor
+    (String n, String g, int a) {
+        this.name = n;
+        this.gender = g;
+        this.age = a;
+        System.out.println("Human Creation Successful.");
+    }
 }
 public class FamilyTree {
     
