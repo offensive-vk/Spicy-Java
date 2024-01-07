@@ -1,11 +1,12 @@
 package inheritance;
 
 interface Human {
-    private static abstract void sleep();
-    private static abstract void speak();
-    private static abstract void breath();
-    private static abstract void drink();
 
+    void sleep();
+    void speak();
+    void breath();
+    void drink();
+    void die();
 }
 
 class HumanConstructor implements Human {
@@ -20,7 +21,14 @@ class HumanConstructor implements Human {
         this.age = a;
         System.out.println("Human Creation Successful.");
     }
+    void sleep();
+    void speak();
+    void breath();
+    void drink();
 }
 public class FamilyTree {
-    
+    public static void main(String[] args) {
+        HumanConstructor H = new HumanConstructor("Adam", "Male", 10);
+
+    }
 }
