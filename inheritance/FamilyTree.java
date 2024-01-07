@@ -3,9 +3,9 @@ import java.io.*;
 package inheritance;
 
 interface Human {
-
     void sleep();
     void speak();
+    void wake();
     void breath();
     void drink();
     void die();
@@ -21,6 +21,9 @@ class HumanConstructor implements Human {
         this.gender = g;
         this.age = a;
         System.out.println("Human Creation Successful.");
+    }
+    public final void wake() {
+        System.out.println(this.name+" is Waking up.");
     }
     public final void sleep() {
         System.out.println(this.name+" is Sleeping.");
@@ -46,13 +49,33 @@ public class FamilyTree {
         String n = sc.nextLine();
         System.out.println("Please Enter Your Age: ");
         int a = sc.nextInt();
-        // System.out.println("\n=========\n===============\n");
         System.out.println("Please Enter Your Gender: ");
         String g = sc.next();
 
         HumanConstructor H = new HumanConstructor(n, g, a);
-        H.sleep();
-        H.drink();
+
+        sc.close();
+    }
+    public static void takeChoice(HumanConstructor H) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Choose Your Operation: \n");
+        System.out.println("1. Wake Up \n");
+        System.out.println("2. Drink Something \n");
+        System.out.println("3. Take Breath \n");
+        System.out.println("4. Speak \n");
+        System.out.println("5. Die [DANGER AHEAD] \n");
+        System.out.print("Your Choice: ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                H.wake();
+                break;
+        
+            default:
+                System.out.println("OOPS ! Invalid Choice.. \n");
+                break;
+        }
         sc.close();
     }
 }
