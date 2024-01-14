@@ -42,8 +42,9 @@ class HumanConstructor implements Human {
     }
 }
 public class FamilyTree {
+    private static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("Please Enter Your Name: ");
         String n = sc.nextLine();
@@ -57,7 +58,6 @@ public class FamilyTree {
         sc.close();
     }
     public static void takeChoice(HumanConstructor H) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Please Choose Your Operation: \n");
         System.out.println("1. Wake Up \n");
         System.out.println("2. Drink Something \n");
