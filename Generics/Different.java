@@ -5,8 +5,9 @@ package Generics;
  * @category final
  */
 public final class Different {
-    final static int DEFAULT = 100;
-    public static final char PUBLIC_KEY = "9GF0BA-HP[A9G]";
+    
+    public final static int DEFAULT = 101854306;
+    public static final char PUBLIC_KEY = "9GF0BA01GX08";
     public static <T> void performSomething(final T value) {
 
         if (value instanceof String) {

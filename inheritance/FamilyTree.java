@@ -68,6 +68,9 @@ public class FamilyTree {
         int choice = sc.nextInt();
 
         switch (choice) {
+            case 0:
+                System.out.println("Re Created An Human.");
+                break;
             case 1:
                 H.wake();
                 break;
