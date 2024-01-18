@@ -42,7 +42,7 @@ class HumanConstructor implements Human {
     }
 }
 public class FamilyTree {
-    private static Scanner sc = new Scanner(System.in);
+    private final static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
@@ -58,37 +58,40 @@ public class FamilyTree {
         sc.close();
     }
     public static void takeChoice(HumanConstructor H) {
-        System.out.println("Please Choose Your Operation: \n");
-        System.out.println("1. Wake Up \n");
-        System.out.println("2. Drink Something \n");
-        System.out.println("3. Take Breath \n");
-        System.out.println("4. Speak \n");
-        System.out.println("5. Die [DANGER AHEAD] \n");
-        System.out.print("Your Choice: ");
-        int choice = sc.nextInt();
-
-        switch (choice) {
-            case 0:
-                System.out.println("Re Created An Human.");
-                break;
-            case 1:
-                H.wake();
-                break;
-            case 2:
-                H.drink();
-                break;
-            case 3:
-                H.breath();
-                break;
-            case 4:
-                H.speak();
-                break;
-            case 5:
-                H.die();
-                break;
-            default:
-                System.out.println("OOPS ! Invalid Choice.. \n");
-                break;
+        while True {
+            System.out.println("Please Choose Your Operation: \n");
+            System.out.println("1. Wake Up \n");
+            System.out.println("2. Drink Something \n");
+            System.out.println("3. Take Breath \n");
+            System.out.println("4. Speak \n");
+            System.out.println("5. Die [DANGER AHEAD] \n");
+            System.out.print("Your Choice: ");
+            int choice = sc.nextInt();
+    
+            switch (choice) {
+                case 0:
+                    System.out.println("Re Created An Human.");
+                    HumanConstructor H;
+                    break;
+                case 1:
+                    H.wake();
+                    break;
+                case 2:
+                    H.drink();
+                    break;
+                case 3:
+                    H.breath();
+                    break;
+                case 4:
+                    H.speak();
+                    break;
+                case 5:
+                    H.die();
+                    break;
+                default:
+                    System.out.println("OOPS ! Invalid Choice.. \n");
+                    break;
+            }
         }
         sc.close();
     }
