@@ -14,6 +14,12 @@ public class Main {
 }
 ```
 
+# To Compile and Run This Program:
+```bash
+$ javac Main.java
+$ java Main
+```
+
 # History
 Java is a **popular**, high-level, and widely-used programming language. It was developed by James Gosling and released by Sun Microsystems (now owned by Oracle Corporation) in 1995. 
 
