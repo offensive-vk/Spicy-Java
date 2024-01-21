@@ -1,6 +1,6 @@
 import java.util.*;
 // Program to Read name and id from the user using objects created by class.
-public class extra{
+public class Extra {
     int id;
     String name;
     public static void main(String[] args) {
