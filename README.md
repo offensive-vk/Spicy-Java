@@ -2,6 +2,14 @@
     <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg" height="250" width="250" />
 </div>
 
+## Quick Links and Navigation:
+For Any Information About Contribution and Documentation of This Repo. <br>
+### Please Refer to: 
+0. [Documentation](https://github.com/offensive-vk/Java/blob/master/README.md) <br>
+1. [Contribution Guidelines](https://github.com/offensive-vk/Java/blob/master/CONTRIBUTING.md) <br>
+2. [Security Guidelines](https://github.com/offensive-vk/Java/blob/master/SECURITY.md) <br>
+3. [Author 🧑‍💻](https://github.com/offensive-vk/) <br>
+
 # **What is Java** ? 
 `Java` is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere `(WORA)`, meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to `C` and `C++`, but has fewer low-level facilities than either of them. 
 
