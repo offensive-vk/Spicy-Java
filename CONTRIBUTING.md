@@ -9,6 +9,6 @@
 - A Github Account 
 - Any Code Editor Like [VS Code](https://code.visualstudio.com/download)
 - Fork this repo and start developing or improve this repo with changes of your own.
-- Create PR [here](https://github.com/offensive-vk/Java/pr) or Issue [here](https://github.com/offensive-vk/Java/issue) for creating an issue.
+- Create PR [here](https://github.com/offensive-vk/Java/pulls) or Issue [here](https://github.com/offensive-vk/Java/issues) for creating an issue.
 - Your Pull Request will be reviewed accordingly and will merge.
 - Author : [offensive-vk](https://github.com/offensive-vk/)
