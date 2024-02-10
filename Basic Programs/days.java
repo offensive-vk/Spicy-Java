@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class days{
+public class Days {
 
 public static void main(String[] args)
     {

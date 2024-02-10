@@ -1,9 +1,11 @@
+package Relationship;
 
 public class Student {
 	int sid;
 	String name;
 	float per;
-    Address add;
+	Address add;
+
 	public Student(int sid, String name, float per, Address add) {
 		super();
 		this.sid = sid;
@@ -12,13 +14,7 @@ public class Student {
 		this.add = add;
 	}
 
-	String printDetails()
-	{
-		return sid+" "+name+" "+per+" "+add.printDetails();
+	String printDetails() {
+		return sid + " " + name + " " + per + " " + add.printDetails();
 	}
 }
-
-
-
-
-

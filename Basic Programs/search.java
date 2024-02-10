@@ -1,6 +1,6 @@
 import java.util.*;
 // A Program to Get Array Size and Elements and search for an element in given array..
-public class search {
+public class Search {
     public static void main(String[] args){
         System.out.print("\n\t\t\t :: A Program By Vedansh :: \n\n\t\t");
         Scanner sc = new Scanner(System.in);

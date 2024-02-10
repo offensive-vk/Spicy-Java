@@ -1,5 +1,5 @@
 import java.util.*;
-public class multi {
+public class 2DArray {
     //Program to create multi dimensional arrays and display the elements.
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -15,7 +15,6 @@ public class multi {
             }
         }
         System.out.print("\n\t\t\t :: Array Elements Are ::\n");
-       // System.out.println("\n\n\n\n\t\t\t\t\t\t\t\t\t");
         for(int i = 0; i<row; i++){
             for(int j = 0; j<col; j++){
             System.out.print(arr[i][j]+" ");
