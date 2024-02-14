@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-package inheritance;
+package Inheritance;
 
 interface Human {
     void sleep();

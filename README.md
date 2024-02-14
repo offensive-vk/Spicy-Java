@@ -10,6 +10,7 @@ For Any Information About Contribution and Documentation of This Repo. <br>
 - [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/.github/SECURITY.md) <br>
 - [Author 🧑‍💻](https://github.com/offensive-vk/) <br>
 
+
 # **What is Java** ? 
 `Java` is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere `(WORA)`, meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to `C` and `C++`, but has fewer low-level facilities than either of them. 
 

@@ -1,4 +1,4 @@
-package inheritance;
+package Inheritance;
 
 class A {
     void display() {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class roots {
+public class Roots {
 
     public static void main(String[] Strings) {
         Scanner input = new Scanner(System.in);

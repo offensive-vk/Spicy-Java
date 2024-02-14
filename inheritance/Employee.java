@@ -1,16 +1,15 @@
-package inheritance;
+package Inheritance;
+
 public class Employee {
 	int eid;
 	String name;
-	
-	void Display()
-	{
+
+	void Display() {
 		System.out.println("company name is Wipro");
 	}
-	
-	public Employee(int eid,String name)
-	{
-		this.eid=eid;
-		this.name=name;
+
+	public Employee(int eid, String name) {
+		this.eid = eid;
+		this.name = name;
 	}
 }
