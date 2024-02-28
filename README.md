@@ -2,19 +2,23 @@
     <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg" height="250" width="250" />
 </div>
 
-## Quick Links and Navigation:
-For Any Information About Contribution and Documentation of This Repo. <br>
-### Please Refer to: 
-- [Documentation 📖](https://github.com/offensive-vk/Java/blob/master/README.md) <br>
-- [Contribution Guidelines ✨](https://github.com/offensive-vk/Java/blob/master/.github/CONTRIBUTING.md) <br>
-- [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/.github/SECURITY.md) <br>
-- [Author 🧑‍💻](https://github.com/offensive-vk/) <br>
+## Quick Links and Navigation
 
+For Any Information About Contribution and Documentation of This Repo.
 
-# **What is Java** ? 
-`Java` is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere `(WORA)`, meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to `C` and `C++`, but has fewer low-level facilities than either of them. 
+### Please Refer to
 
-# Sample Java Code: 
+- [Documentation 📖](https://github.com/offensive-vk/Java/blob/master/README.md)
+- [Contribution Guidelines ✨](https://github.com/offensive-vk/Java/blob/master/.github/CONTRIBUTING.md)
+- [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/.github/SECURITY.md)
+- [Author 🧑‍💻](https://github.com/offensive-vk/)
+
+# **What is Java** ?
+
+`Java` is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere `(WORA)`, meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any `Java virtual machine` (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to `C` and `C++`, but has fewer low-level facilities than either of them.
+
+## Sample Java Code
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -23,14 +27,16 @@ public class Main {
 }
 ```
 
-# To Compile and Run This Program:
+## To Compile and Run This Program
+
 ```bash
 $ javac Main.java
 $ java Main
 ```
 
-# History
-Java is a **popular**, high-level, and widely-used programming language. It was developed by James Gosling and released by Sun Microsystems (now owned by Oracle Corporation) in 1995. 
+## History
+
+Java is a **popular**, high-level, and widely-used programming language. It was developed by James Gosling and released by Sun Microsystems (now owned by Oracle Corporation) in 1995.
 
 ## Key Characteristics
 
@@ -56,9 +62,9 @@ Java is a **popular**, high-level, and widely-used programming language. It was 
 
 Java is commonly used in a wide range of applications, including web development (Java EE, Spring), mobile app development (Android), scientific and financial applications, game development, and more. Its versatility and broad adoption have contributed to its enduring popularity in the software development community.
 
-## Programs are Categorized According to Topics.
+## Programs are Categorized According to Topics
 
-- Learning Java in Year 2024 is Good Thing.
+- Learning Java in Year 2024 Could Be A Good Skill.
 - All Necessary Notes and Programs are Uploaded.
 - New Programs Are being Added. (Data Structures+Collections).
 - Brought To You By [@offensive-vk](https://github.com/offensive-vk/)
