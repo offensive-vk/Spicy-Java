@@ -18,3 +18,6 @@ public class Arrays {
         sc.close();
     }
 }
+/**
+ * Arrays are a data structure that store elements of the same type in contiguous memory locations. They provide random access to elements based on an index.
+ */

@@ -44,3 +44,7 @@ public class QueueExample {
         System.out.println("Final queue: " + queue);
     }
 }
+
+/**
+ * Queue is an interface in Java that represents a collection designed for holding elements prior to processing. It follows the First-In-First-Out (FIFO) order for element retrieval.
+ */

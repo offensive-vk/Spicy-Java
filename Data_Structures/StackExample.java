@@ -41,3 +41,7 @@ public class StackExample {
         System.out.println("Size of the stack: " + stack.size());
     }
 }
+
+/**
+ * Stack is a subclass of Vector in Java that represents a last-in, first-out (LIFO) stack of objects. It provides methods like push and pop for adding and removing elements from the top of the stack.
+ */
