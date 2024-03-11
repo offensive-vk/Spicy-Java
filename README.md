@@ -8,9 +8,9 @@ For Any Information About Contribution and Documentation of This Repo.
 
 ### Please Refer to
 
-- [Documentation 📖](https://github.com/offensive-vk/Java/blob/master/README.md)
-- [Contribution Guidelines ✨](https://github.com/offensive-vk/Java/blob/master/.github/CONTRIBUTING.md)
-- [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/.github/SECURITY.md)
+- [Documentation 📖](https://github.com/offensive-vk/Java/blob/master/README.md) (*Currently Reading.*)
+- [Contribution Guidelines ✨](https://github.com/offensive-vk/Java/blob/master/CONTRIBUTING.md)
+- [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/SECURITY.md)
 - [Author 🧑‍💻](https://github.com/offensive-vk/)
 
 # **What is Java** ?

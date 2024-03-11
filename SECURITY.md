@@ -1,4 +1,4 @@
-# Reporting Security Issues or Vulnerability.
+# Reporting Security Issues or Vulnerability
 
 If you believe you have found a security vulnerability, I / we encourage you to let us know right away.
 
