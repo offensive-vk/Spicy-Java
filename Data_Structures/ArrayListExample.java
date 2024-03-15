@@ -34,3 +34,7 @@ public class ArrayListExample {
         System.out.println("Number of fruits: " + fruits.size());
     }
 }
+
+/**
+ * ArrayList is a resizable array implementation of the List interface in Java. It dynamically grows and shrinks as elements are added or removed. It allows duplicate elements and maintains insertion order.
+ */

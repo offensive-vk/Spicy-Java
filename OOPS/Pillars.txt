@@ -1,0 +1,10 @@
+
+In Java, the pillars of Object-Oriented Programming (OOP) supported are:
+
+Encapsulation: This refers to the bundling of data (attributes) and methods (behaviors) that operate on the data into a single unit called a class. Encapsulation restricts direct access to some of the object's components, which prevents the accidental modification of data.
+
+Inheritance: Inheritance allows a class (subclass or derived class) to inherit attributes and methods from another class (superclass or base class). This promotes code reusability and establishes a relationship between classes, where subclasses can extend the functionality of the superclass.
+
+Polymorphism: Polymorphism means the ability of an object to take on multiple forms. In Java, polymorphism can be achieved through method overriding (runtime polymorphism) and method overloading (compile-time polymorphism). Method overriding occurs when a subclass provides a specific implementation of a method that is already provided by its superclass, while method overloading occurs when a class has multiple methods with the same name but different parameters.
+
+Abstraction: Abstraction refers to the concept of hiding the complex implementation details and showing only the necessary features of an object. In Java, abstraction is achieved through abstract classes and interfaces. Abstract classes cannot be instantiated and may contain abstract methods (methods without implementation) that must be implemented by subclasses. Interfaces define a contract for implementing classes, specifying a set of methods that implementing classes must define.

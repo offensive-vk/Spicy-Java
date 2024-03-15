@@ -1,3 +1,4 @@
+package Advanced;
 import java.util.*;
 public class 2DArray {
     //Program to create multi dimensional arrays and display the elements.

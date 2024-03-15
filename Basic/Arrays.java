@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Array {
+public class Arrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,3 +18,6 @@ class Array {
         sc.close();
     }
 }
+/**
+ * Arrays are a data structure that store elements of the same type in contiguous memory locations. They provide random access to elements based on an index.
+ */
