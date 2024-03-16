@@ -1,5 +1,9 @@
 <div align="center">
-    <img src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg" height="250" width="250" />
+    <img
+    src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg"
+    height="250"
+    width="250"
+    />
 </div>
 
 ## Quick Links and Navigation
@@ -8,9 +12,9 @@ For Any Information About Contribution and Documentation of This Repo.
 
 ### Please Refer to
 
-- [Documentation 📖](https://github.com/offensive-vk/Java/blob/master/README.md) (*Currently Reading.*)
-- [Contribution Guidelines ✨](https://github.com/offensive-vk/Java/blob/master/CONTRIBUTING.md)
-- [Security Guidelines ⚠️](https://github.com/offensive-vk/Java/blob/master/SECURITY.md)
+- [Documentation 📖](https://github.com/offensive-vk/Spicy-Java/blob/master/README.md) (*Currently Reading.*)
+- [Contribution Guidelines ✨](https://github.com/offensive-vk/Spicy-Java/blob/master/CONTRIBUTING.md)
+- [Security Guidelines ⚠️](https://github.com/offensive-vk/Spicy-Java/blob/master/SECURITY.md)
 - [Author 🧑‍💻](https://github.com/offensive-vk/)
 
 # **What is Java** ?
@@ -38,7 +42,8 @@ $ java Main
 
 Java is a **popular**, high-level, and widely-used programming language. It was developed by James Gosling and released by Sun Microsystems (now owned by Oracle Corporation) in 1995.
 
-## Key Characteristics
+<details>
+    <summary><strong>Key Characteristics</strong></summary>
 
 - **Platform Independence**: Java uses a "write once, run anywhere" approach. Code written in Java can be executed on any platform with a Java Virtual Machine (JVM) without modification. This is achieved through the compilation of Java source code into bytecode, which is interpreted by the JVM on the target platform.
 
@@ -61,10 +66,11 @@ Java is a **popular**, high-level, and widely-used programming language. It was 
 - **Open-Source Implementation**: There are open-source implementations of the Java platform, such as OpenJDK, in addition to Oracle's official implementation.
 
 Java is commonly used in a wide range of applications, including web development (Java EE, Spring), mobile app development (Android), scientific and financial applications, game development, and more. Its versatility and broad adoption have contributed to its enduring popularity in the software development community.
+</details>
 
 ## Programs are Categorized According to Topics
 
-- Learning Java in Year 2024 Could Be A Good Skill.
+- Learning *Java* in Year 2024 Could Be A Good Skill.
 - All Necessary Notes and Programs are Uploaded.
 - New Programs Are being Added. (Data Structures+Collections).
 - Brought To You By [@offensive-vk](https://github.com/offensive-vk/)

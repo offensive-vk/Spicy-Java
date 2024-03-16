@@ -11,7 +11,7 @@ Your responsibility is to Maintain The Security and Privacy Of This Repo.
 - An Version Control System. (Git)
 - Any Code Editor Like [Visual Studio Code](https://code.visualstudio.com/download)
 - Fork this repo and starting developing or fix changes of your own.
-- Create A Pull Request [here](https://github.com/offensive-vk/Java/pulls) and Issue [here](https://github.com/offensive-vk/Java/issues) for creating an issue.
+- Create A Pull Request [here](https://github.com/offensive-vk/Spicy-Java/pulls) and Issue [here](https://github.com/offensive-vk/Spicy-Java/issues) for creating an issue.
 - Your Pull Request will be reviewed accordingly and will merge.
 - Author : [offensive-vk](https://github.com/offensive-vk/)
 - Keep Contributing to Open Source and Promote OSP.
