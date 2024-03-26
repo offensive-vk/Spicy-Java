@@ -1,33 +1,32 @@
 package Others;
 
-class Gparent {
-	Gparent(int num) {
-		System.out.println("gparent parametrized constructor");
+class SuperParent {
+	SuperParent(int num) {
+		System.out.println("superparent parametrized constructor");
 	}
 }
 
-class Parent extends Gparent {
-	Parent() {
-		super(10);// call to parameterized constructor of parent class
-		System.out.println("parent class constructor");
+class SuperChild extends SuperParent {
+	SuperChild() {
+		super(10); // call to parameterized constructor of parent class
+		System.out.println("superchild class constructor");
 	}
 }
 
-class Child extends Parent {
-	Child(int i) {
-		System.out.println("gparent parametrized constructor");
+class SubChild extends SuperChild {
+	SubChild(int i) {
+		System.out.println("superparent parametrized constructor");
 	}
 
-	Child() {
+	SubChild() {
 		this(10); // call to parameterized constructor of same class
-		System.out.println("gparent default constructor");
+		System.out.println("superparent default constructor");
 	}
 }
 
-public class ChainingDemo {
+public class ChainDemo {
 
 	public static void main(String[] args) {
-		Child ob = new Child();
-
+		SubChild obj = new SubChild();
 	}
 }
