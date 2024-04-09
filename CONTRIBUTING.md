@@ -1,5 +1,7 @@
 # Contributing To This Repository ✨
 
+***
+
 ## Requirements for contributing to this repository: (For New Contributors or first time contributors.)
 
 - A Github Account. (User Accounts)

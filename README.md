@@ -1,8 +1,8 @@
 <div align="center">
     <img
-    src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg"
-    height="250"
-    width="250"
+        src="https://cdn.jsdelivr.net/gh/offensive-vk/Icons@master/java/java-original-wordmark.svg"
+        height="250"
+        width="250"
     />
 </div>
 
@@ -12,9 +12,9 @@ For Any Information About Contribution and Documentation of This Repo.
 
 ### Please Refer to
 
-- [Documentation 📖](https://github.com/offensive-vk/Spicy-Java/blob/master/README.md) (*Currently Reading.*)
-- [Contribution Guidelines ✨](https://github.com/offensive-vk/Spicy-Java/blob/master/CONTRIBUTING.md)
-- [Security Guidelines ⚠️](https://github.com/offensive-vk/Spicy-Java/blob/master/SECURITY.md)
+- [Documentation 📖](https://github.com/offensive-vk/Spicy-Java/blob/master/readme.md) (*Currently Reading.*)
+- [Contribution Guidelines ✨](https://github.com/offensive-vk/Spicy-Java/blob/master/contributing.md)
+- [Security Guidelines ⚠️](https://github.com/offensive-vk/Spicy-Java/blob/master/security.md)
 - [Author 🧑‍💻](https://github.com/offensive-vk/)
 
 # **What is Java** ?
@@ -75,3 +75,12 @@ Java is commonly used in a wide range of applications, including web development
 - New Programs Are being Added. (Data Structures+Collections).
 - Brought To You By [@offensive-vk](https://github.com/offensive-vk/)
 - Thank you for being here. ✌️
+
+***
+
+<p align="center">
+  <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
+  <i>Licensed under <a href="">GPL-3.0</a></i><br>
+  <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
+  <sup>Thanks for visiting :)</sup>
+</p>
