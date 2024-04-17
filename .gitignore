@@ -6,4 +6,5 @@ tests/
 test/
 .vscode/
 .metadata/
+.java/
 # ==================
