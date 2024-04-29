@@ -12,7 +12,7 @@ For Any Information About Contribution and Documentation of This Repo.
 
 ### Please Refer to
 
-- [Documentation 📖](https://github.com/offensive-vk/Spicy-Java/blob/master/readme.md) (*Currently Reading.*)
+- [Documentation 📖](https://github.com/offensive-vk/Spicy-Java/blob/master/readme.md) (*Currently File.*)
 - [Contribution Guidelines ✨](https://github.com/offensive-vk/Spicy-Java/blob/master/contributing.md)
 - [Security Guidelines ⚠️](https://github.com/offensive-vk/Spicy-Java/blob/master/security.md)
 - [Author 🧑‍💻](https://github.com/offensive-vk/)
@@ -80,7 +80,7 @@ Java is commonly used in a wide range of applications, including web development
 
 <p align="center">
   <i>&copy; <a href="https://github.com/offensive-vk/">Vedansh </a> 2023 - Present</i><br>
-  <i>Licensed under <a href="">GPL-3.0</a></i><br>
+  <i>Licensed under <a href="https://github.com/offensive-vk/Spicy-Java/tree/master?tab=GPL-3.0-1-ov-file#">GPL-3.0</a></i><br>
   <a href="https://github.com/npm-run-test"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
   <sup>Thanks for visiting :)</sup>
 </p>
