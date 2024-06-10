@@ -1,4 +1,4 @@
-package Threads;
+package Threading;
 
 class MyThread extends Thread {
     public void run() {

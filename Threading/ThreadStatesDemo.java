@@ -1,4 +1,4 @@
-package Threads;
+package Threading;
 
 public class ThreadStatesDemo {
     public static void main(String[] args) {
