@@ -1,4 +1,4 @@
-package OOPS.Incapsulation;
+package Incapsulation;
 
 public class Product {
 	private int pid;

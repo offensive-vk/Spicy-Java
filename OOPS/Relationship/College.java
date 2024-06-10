@@ -13,9 +13,7 @@ public class College {
 	}
 
 	void addStudent(Student stu) {
-
 		arr[counter] = stu;
-
 		counter++;
 	}
 
