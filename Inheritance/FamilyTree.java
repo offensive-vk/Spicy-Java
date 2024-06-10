@@ -1,6 +1,6 @@
+package Inheritance;
 import java.util.*;
 import java.io.*;
-package Inheritance;
 
 interface Human {
     void sleep();
@@ -58,7 +58,7 @@ public class FamilyTree {
         sc.close();
     }
     public static void takeChoice(HumanConstructor H) {
-        while True {
+        while (true) {
             System.out.println("Please Choose Your Operation: \n");
             System.out.println("1. Wake Up \n");
             System.out.println("2. Drink Something \n");

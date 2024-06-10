@@ -18,7 +18,7 @@ class C extends A {
     }
 }
 
-public class Diamond extends B, C { // Diamond Inheritance
+public class Diamond extends B, C {
     public static void main(String[] args) {
         D d = new D();
         d.display();
