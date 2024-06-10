@@ -7,8 +7,8 @@ public class Strings {
         String str = "abcd";
 
         str.charAt(2);       // c
-        str.indexOf("a")     // 0
-        str.indexOf("z")     // -1
+        str.indexOf("a");     // 0
+        str.indexOf("z");     // -1
         str.length();        // 4
         str.toString();      // abcd
         str.substring(2);    // cd
@@ -21,8 +21,8 @@ public class Strings {
         String s1 = new String("Quick"); 
         String s2 = new String("Quick"); 
 
-        s1 == s2          // false
-        s1.equals(s2)     // true
+        s1 = s2;    // false
+        s1.equals(s2);     // true
 
         "AB".equalsIgnoreCase("ab")  // true
 
@@ -41,7 +41,6 @@ public class Strings {
         str.replace("b", "-"); // A-cd
         
         "  abc ".trim();       // abc
-        "ab".toCharArray();    // {'a', 'b'}
-        
+        "ab".toCharArray();    // {'a', 'b'}        
     }
 }

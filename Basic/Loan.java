@@ -1,6 +1,6 @@
 import java.util.*;
 
-public final class Loan {
+public class Loan {
     int id;
     int account;
     int balance;
