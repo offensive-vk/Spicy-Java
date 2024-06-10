@@ -71,7 +71,7 @@ public class FamilyTree {
             switch (choice) {
                 case 0:
                     System.out.println("Re Created An Human.");
-                    HumanConstructor H;
+                    //HumanConstructor X;
                     break;
                 case 1:
                     H.wake();
@@ -93,6 +93,5 @@ public class FamilyTree {
                     break;
             }
         }
-        sc.close();
     }
 }

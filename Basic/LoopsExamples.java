@@ -1,4 +1,4 @@
-public class LoopExamples {
+public class LoopsExamples {
     public static void main(String[] args) {
         // For Loop
         System.out.println("For Loop:");
