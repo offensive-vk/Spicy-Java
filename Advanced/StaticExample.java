@@ -1,5 +1,5 @@
+package Advanced;
 public class StaticExample {
-
     public static void main(String[] args) {
         // Accessing static nested class without creating an instance of the outer class
         OuterClass.StaticNestedClass staticNestedObject = new OuterClass.StaticNestedClass();

@@ -1,6 +1,7 @@
 package Advanced;
 
 import java.lang.annotation.*;
+import java.util.List;
 
 // Marker Annotation
 @Retention(RetentionPolicy.RUNTIME)
@@ -30,7 +31,7 @@ public class AnnotationDemo {
     // @SuppressWarnings: Suppresses compiler warnings
     @SuppressWarnings("unchecked")
     public void suppressedMethod() {
-        java.util.List list = new java.util.ArrayList();
+        List list = new java.util.ArrayList<>();
         list.add("Suppressing warnings.");
     }
 
@@ -80,4 +81,5 @@ Configuration and Metadata: Annotations can be used to provide configuration par
 Code Generation: Annotations can be used by code generation tools or frameworks to generate code, configuration files, or other resources based on the annotations present in the source code.
 
 Some commonly used annotations in Java include @Override, @Deprecated, @SuppressWarnings, @FunctionalInterface, @Retention, @Target, and custom annotations defined by developers.
- */
+ 
+*/
