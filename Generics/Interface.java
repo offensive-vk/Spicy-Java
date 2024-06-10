@@ -3,6 +3,7 @@ interface Pair<K, V > {
     K getKey();
     V getValue();
 }
+
 public class Interface <K, V> implements Pair<K, V>{
     private K key;
     private V value;
@@ -26,5 +27,3 @@ public class Interface <K, V> implements Pair<K, V>{
         System.out.println("Value: " + pair.getValue());
     }
 }
-
-

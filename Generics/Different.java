@@ -7,7 +7,7 @@ package Generics;
 public final class Different {
     
     public final static int DEFAULT = 101854306;
-    public static final char PUBLIC_KEY = "9GF0BA01GX08";
+    public static final String PUBLIC_KEY = "9GF0BA01GX08";
     public static <T> void performSomething(final T value) {
 
         if (value instanceof String) {

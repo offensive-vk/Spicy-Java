@@ -64,9 +64,9 @@ class Special extends Council implements SpecialStudent<String> {
     @Override
     public final void SpecialData(Special student) {
         System.out.printf("Special ID : %s\n", student.SpecialID);
-        System.out.printf("ID : %s\n", student.id);
-        System.out.printf("Student Name : %s\n", student.name);
-        System.out.printf("Student Section : %s\n", student.section);
+        System.out.printf("ID : %s\n", super.id);
+        System.out.printf("Student Name : %s\n", super.name);
+        System.out.printf("Student Section : %s\n", super.section);
     }
 
     @Override
