@@ -1,4 +1,4 @@
-package OOPS.Incapsulation;
+package Incapsulation;
 
 public class Driver {
 

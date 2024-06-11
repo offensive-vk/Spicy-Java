@@ -35,7 +35,7 @@ class GenericMethod {
     }
 }
 
-public class GenericConstraintsExample {
+public class ComparableExample {
     public static void main(String[] args) {
         // Using GenericBox with Integer values
         GenericBox<Integer> intBox1 = new GenericBox<>(10);

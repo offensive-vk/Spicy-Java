@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Roots {
-
     public static void main(String[] Strings) {
         Scanner input = new Scanner(System.in);
 
@@ -23,6 +22,7 @@ public class Roots {
         } else {
             System.out.println("The equation has no real roots.");
         }
+        
         input.close();
     }
 }

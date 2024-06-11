@@ -53,7 +53,7 @@ class ITCThread extends Thread {
 		if (Thread.currentThread().getName().equals("producer"))
 			ob.producer();
 		else
-			ob.consumere();
+			ob.consumer();
 	}
 }
 

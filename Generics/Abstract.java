@@ -9,11 +9,13 @@ public final class Abstract extends Parent<Integer>{
         P.SomeOtherRandom(true);
         Display();
     }
-    public final static void Display(){
+    
+    public final static void Display() {
         Parent<String> X = new Parent<>();
         X.SomeOtherRandom("Display Function.");
         System.out.println(X.getLength());
     }
+
     public final static void Kid(){
         Kid<Integer> K = new Kid<>();
         System.out.println("Verification of Kid class: "+K.VerifyKid(K));
@@ -103,16 +105,17 @@ class Parent<T> extends Human<T> {
     }
 }
 
-final class Kid<X> extends Parent<String>{
+final class Kid<X> extends Parent<String> {
     public final int id = 01;
     private final static String className = "Kid Class";
 
-    public Kid(X name){
+    public Kid(X name) {
         System.out.printf("%s constructor called ", className);
     }
-    public Kid(){}
-    public final Boolean VerifyKid(Kid<X> kid){
-        if(kid instanceof Kid){
+
+    public Kid() { }
+    public final Boolean VerifyKid(Kid<X> kid) {
+        if(kid instanceof Kid) {
             return true;
         }
         return false;

@@ -19,5 +19,6 @@ public class Letters {
         } else {
             System.out.println("Input letter is Consonant");
         }
+        in.close();
     }
 }

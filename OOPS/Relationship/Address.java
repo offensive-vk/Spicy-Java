@@ -1,7 +1,6 @@
 package Relationship;
 
 public class Address {
-
 	String street;
 	String city;
 	String state;
@@ -17,5 +16,4 @@ public class Address {
 	String printDetails() {
 		return street + " " + city + " " + state + " " + pin;
 	}
-
 }

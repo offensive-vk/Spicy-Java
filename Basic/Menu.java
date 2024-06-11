@@ -1,7 +1,6 @@
 // Using a do-while to process a menu selection
 class Menu {
-    public static void main(String args[])
-            throws java.io.IOException {
+    public static void main(String args[]) throws java.io.IOException {
         char choice;
         do {
             System.out.println("\n\n\n\t\t\t\t:: Display Help On :: \n\n\n\n\n\n");
@@ -47,7 +46,7 @@ class Menu {
                 break;
             case '6':
                 System.out.flush();
-                System.out.println("\n\n\n\n\n\t\t\t\t\t\t :: Thanks for Using This Help Manual !! :: \n\n");
+                System.out.println("\n\n\t\t\t\t\t\t :: Thanks for Using This Help Manual !! :: \n\n");
                 System.exit(choice);
             default:
                 System.out.println("\n\n:: Invalid Choice !! \n\n");

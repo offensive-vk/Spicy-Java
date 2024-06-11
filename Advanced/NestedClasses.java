@@ -22,7 +22,7 @@ public class NestedClasses {
         staticNestedObject.staticNestedMethod();
         
         // Accessing inner class
-        Main outerObject = new Main();
+        NestedClasses outerObject = new NestedClasses();
         InnerClass innerObject = outerObject.new InnerClass();
         innerObject.innerMethod();
         
