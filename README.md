@@ -34,8 +34,12 @@ public class Main {
 ## To Compile and Run This Program
 
 ```bash
-$ javac Main.java
-$ java Main
+$ javac main.java
+```
+
+## To run
+```bash
+$ java main
 ```
 
 ## History
